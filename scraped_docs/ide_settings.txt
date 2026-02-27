@@ -1,0 +1,346 @@
+URL: https://developers.openai.com/codex/ide/settings
+Scraped: 2026-02-27T16:31:17.387684+00:00
+
+Codex IDE extension settings
+Search the Codex docs
+Primary navigation
+Get started
+Overview
+Quickstart
+Models
+Pricing
+Libraries
+Latest: GPT-5.2
+Core concepts
+Text generation
+Code generation
+Images and vision
+Audio and speech
+Structured output
+Function calling
+Responses API
+Agents
+Overview
+Build agents
+Agent Builder
+Node reference
+Safety in building agents
+Agents SDK
+Deploy in your product
+ChatKit
+Custom theming
+Widgets
+Actions
+Advanced integration
+Optimize
+Agent evals
+Trace grading
+Voice agents
+Tools
+Using tools
+Connectors and MCP
+Skills
+Shell
+Web search
+Code interpreter
+File search and retrieval
+File search
+Retrieval
+More tools
+Image generation
+Computer use
+Local shell tool
+Apply patch
+Run and scale
+Conversation state
+Background mode
+Streaming
+WebSocket mode
+Webhooks
+File inputs
+Context management
+Compaction
+Counting tokens
+Prompt caching
+Prompting
+Overview
+Prompt engineering
+Reasoning
+Reasoning models
+Reasoning best practices
+Evaluation
+Getting started
+Working with evals
+Prompt optimizer
+External models
+Best practices
+Realtime API
+Overview
+Connect
+WebRTC
+WebSocket
+SIP
+Usage
+Using realtime models
+Managing conversations
+Webhooks and server-side controls
+Managing costs
+Realtime transcription
+Voice agents
+Model optimization
+Optimization cycle
+Fine-tuning
+Supervised fine-tuning
+Vision fine-tuning
+Direct preference optimization
+Reinforcement fine-tuning
+RFT use cases
+Best practices
+Graders
+Specialized models
+Image generation
+Video generation
+Text to speech
+Speech to text
+Deep research
+Embeddings
+Moderation
+Going live
+Production best practices
+Latency optimization
+Overview
+Predicted Outputs
+Priority processing
+Cost optimization
+Overview
+Batch
+Flex processing
+Accuracy optimization
+Safety
+Safety best practices
+Safety checks
+Cybersecurity checks
+Under 18 API Guidance
+Legacy APIs
+Assistants API
+Migration guide
+Deep dive
+Tools
+Resources
+Terms and policies
+Changelog
+Your data
+Permissions
+Rate limits
+Deprecations
+MCP for deep research
+Developer mode
+ChatGPT Actions
+Introduction
+Getting started
+Actions library
+Authentication
+Production
+Data retrieval
+Sending files
+Getting Started
+Overview
+Quickstart
+Explore
+Pricing
+Concepts
+Prompting
+Customization
+Multi-agents
+Workflows
+Models
+Cyber Safety
+Using Codex
+App
+Overview
+Features
+Settings
+Review
+Automations
+Worktrees
+Local Environments
+Commands
+Troubleshooting
+IDE Extension
+Overview
+Features
+Settings
+IDE Commands
+Slash commands
+CLI
+Overview
+Features
+Command Line Options
+Slash commands
+Web
+Overview
+Environments
+Internet Access
+Integrations
+GitHub
+Slack
+Linear
+Configuration
+Config File
+Config Basics
+Advanced Config
+Config Reference
+Sample Config
+Rules
+AGENTS.md
+MCP
+Skills
+Multi-agents
+Administration
+Authentication
+Security
+Enterprise
+Admin Setup
+Governance
+Managed configuration
+Windows
+Automation
+Non-interactive Mode
+Codex SDK
+App Server
+MCP Server
+GitHub Action
+Learn
+Videos
+Blog
+Building frontend UIs with Codex and Figma
+Testing Agent Skills Systematically with Evals
+View all
+Cookbooks
+Codex Prompting Guide
+Long horizon tasks with Codex
+View all
+Building AI Teams
+Community
+Ambassadors
+Meetups
+Releases
+Changelog
+Feature Maturity
+Open Source
+Home
+Quickstart
+Core Concepts
+MCP Apps in ChatGPT
+MCP Server
+UX principles
+UI guidelines
+Plan
+Research use cases
+Define tools
+Design components
+Build
+Set up your server
+Build your ChatGPT UI
+Authenticate users
+Manage state
+Monetize your app
+Examples
+Deploy
+Deploy your app
+Connect from ChatGPT
+Test your integration
+Submit your app
+Guides
+Optimize Metadata
+Security & Privacy
+Troubleshooting
+Resources
+Changelog
+App submission guidelines
+Reference
+Home
+Guides
+Get started
+Key concepts
+Production readiness
+Commerce specs
+Agentic Checkout
+Delegated Payment
+Product feeds
+Overview
+Onboarding
+Feed spec
+Best practices
+Home
+Docs MCP
+Categories
+Code
+Cookbooks
+Guides
+Videos
+Topics
+Agents
+Audio & Voice
+Computer use
+Codex
+Evals
+gpt-oss
+Fine-tuning
+Image generation
+Scaling
+Tools
+Video generation
+Home
+Topics
+Agents
+Evals
+Multimodal
+Text
+Guardrails
+Optimization
+ChatGPT
+Codex
+gpt-oss
+Contribute
+Cookbook on GitHub
+All posts
+Recent
+Building frontend UIs with Codex and Figma
+Shell + Skills + Compaction: Tips for long-running agents that do real work
+15 lessons learned building ChatGPT Apps
+Testing Agent Skills Systematically with Evals
+Supercharging Codex with JetBrains MCP at Skyscanner
+Topics
+General
+API
+Apps SDK
+Audio
+Codex
+API Dashboard
+Use these settings to customize the Codex IDE extension.
+Change a setting
+To change a setting, follow these steps:
+Open your editor settings.
+Search for
+Codex
+or the setting name.
+Update the value.
+The Codex IDE extension uses the Codex CLI. Configure some behavior, such as the default model, approvals, and sandbox settings, in the shared
+~/.codex/config.toml
+file instead of in editor settings. See
+Config basics
+.
+Settings reference
+Setting
+Description
+chatgpt.cliExecutable
+Development only: Path to the Codex CLI executable. You don’t need to set this unless you’re actively developing the Codex CLI. If you set this manually, parts of the extension might not work as expected.
+chatgpt.commentCodeLensEnabled
+Show CodeLens above to-do comments so you can complete them with Codex.
+chatgpt.localeOverride
+Preferred language for the Codex UI. Leave empty to detect automatically.
+chatgpt.openOnStartup
+Focus the Codex sidebar when the extension finishes starting.
+chatgpt.runCodexInWindowsSubsystemForLinux
+Windows only: Run Codex in WSL when Windows Subsystem for Linux (WSL) is available. Recommended for improved sandbox security and better performance. Codex agent mode on Windows currently requires WSL. Changing this setting reloads VS Code to apply the change.

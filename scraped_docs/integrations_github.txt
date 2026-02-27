@@ -1,0 +1,377 @@
+URL: https://developers.openai.com/codex/integrations/github
+Scraped: 2026-02-27T16:31:22.538461+00:00
+
+Use Codex in GitHub
+Search the Codex docs
+Primary navigation
+Get started
+Overview
+Quickstart
+Models
+Pricing
+Libraries
+Latest: GPT-5.2
+Core concepts
+Text generation
+Code generation
+Images and vision
+Audio and speech
+Structured output
+Function calling
+Responses API
+Agents
+Overview
+Build agents
+Agent Builder
+Node reference
+Safety in building agents
+Agents SDK
+Deploy in your product
+ChatKit
+Custom theming
+Widgets
+Actions
+Advanced integration
+Optimize
+Agent evals
+Trace grading
+Voice agents
+Tools
+Using tools
+Connectors and MCP
+Skills
+Shell
+Web search
+Code interpreter
+File search and retrieval
+File search
+Retrieval
+More tools
+Image generation
+Computer use
+Local shell tool
+Apply patch
+Run and scale
+Conversation state
+Background mode
+Streaming
+WebSocket mode
+Webhooks
+File inputs
+Context management
+Compaction
+Counting tokens
+Prompt caching
+Prompting
+Overview
+Prompt engineering
+Reasoning
+Reasoning models
+Reasoning best practices
+Evaluation
+Getting started
+Working with evals
+Prompt optimizer
+External models
+Best practices
+Realtime API
+Overview
+Connect
+WebRTC
+WebSocket
+SIP
+Usage
+Using realtime models
+Managing conversations
+Webhooks and server-side controls
+Managing costs
+Realtime transcription
+Voice agents
+Model optimization
+Optimization cycle
+Fine-tuning
+Supervised fine-tuning
+Vision fine-tuning
+Direct preference optimization
+Reinforcement fine-tuning
+RFT use cases
+Best practices
+Graders
+Specialized models
+Image generation
+Video generation
+Text to speech
+Speech to text
+Deep research
+Embeddings
+Moderation
+Going live
+Production best practices
+Latency optimization
+Overview
+Predicted Outputs
+Priority processing
+Cost optimization
+Overview
+Batch
+Flex processing
+Accuracy optimization
+Safety
+Safety best practices
+Safety checks
+Cybersecurity checks
+Under 18 API Guidance
+Legacy APIs
+Assistants API
+Migration guide
+Deep dive
+Tools
+Resources
+Terms and policies
+Changelog
+Your data
+Permissions
+Rate limits
+Deprecations
+MCP for deep research
+Developer mode
+ChatGPT Actions
+Introduction
+Getting started
+Actions library
+Authentication
+Production
+Data retrieval
+Sending files
+Getting Started
+Overview
+Quickstart
+Explore
+Pricing
+Concepts
+Prompting
+Customization
+Multi-agents
+Workflows
+Models
+Cyber Safety
+Using Codex
+App
+Overview
+Features
+Settings
+Review
+Automations
+Worktrees
+Local Environments
+Commands
+Troubleshooting
+IDE Extension
+Overview
+Features
+Settings
+IDE Commands
+Slash commands
+CLI
+Overview
+Features
+Command Line Options
+Slash commands
+Web
+Overview
+Environments
+Internet Access
+Integrations
+GitHub
+Slack
+Linear
+Configuration
+Config File
+Config Basics
+Advanced Config
+Config Reference
+Sample Config
+Rules
+AGENTS.md
+MCP
+Skills
+Multi-agents
+Administration
+Authentication
+Security
+Enterprise
+Admin Setup
+Governance
+Managed configuration
+Windows
+Automation
+Non-interactive Mode
+Codex SDK
+App Server
+MCP Server
+GitHub Action
+Learn
+Videos
+Blog
+Building frontend UIs with Codex and Figma
+Testing Agent Skills Systematically with Evals
+View all
+Cookbooks
+Codex Prompting Guide
+Long horizon tasks with Codex
+View all
+Building AI Teams
+Community
+Ambassadors
+Meetups
+Releases
+Changelog
+Feature Maturity
+Open Source
+Home
+Quickstart
+Core Concepts
+MCP Apps in ChatGPT
+MCP Server
+UX principles
+UI guidelines
+Plan
+Research use cases
+Define tools
+Design components
+Build
+Set up your server
+Build your ChatGPT UI
+Authenticate users
+Manage state
+Monetize your app
+Examples
+Deploy
+Deploy your app
+Connect from ChatGPT
+Test your integration
+Submit your app
+Guides
+Optimize Metadata
+Security & Privacy
+Troubleshooting
+Resources
+Changelog
+App submission guidelines
+Reference
+Home
+Guides
+Get started
+Key concepts
+Production readiness
+Commerce specs
+Agentic Checkout
+Delegated Payment
+Product feeds
+Overview
+Onboarding
+Feed spec
+Best practices
+Home
+Docs MCP
+Categories
+Code
+Cookbooks
+Guides
+Videos
+Topics
+Agents
+Audio & Voice
+Computer use
+Codex
+Evals
+gpt-oss
+Fine-tuning
+Image generation
+Scaling
+Tools
+Video generation
+Home
+Topics
+Agents
+Evals
+Multimodal
+Text
+Guardrails
+Optimization
+ChatGPT
+Codex
+gpt-oss
+Contribute
+Cookbook on GitHub
+All posts
+Recent
+Building frontend UIs with Codex and Figma
+Shell + Skills + Compaction: Tips for long-running agents that do real work
+15 lessons learned building ChatGPT Apps
+Testing Agent Skills Systematically with Evals
+Supercharging Codex with JetBrains MCP at Skyscanner
+Topics
+General
+API
+Apps SDK
+Audio
+Codex
+API Dashboard
+Use Codex to review pull requests without leaving GitHub. Add a pull request comment with
+@codex review
+, and Codex replies with a standard GitHub code review.
+Set up code review
+Set up
+Codex cloud
+.
+Go to
+Codex settings
+and turn on
+Code review
+for your repository.
+Request a review
+In a pull request comment, mention
+@codex review
+.
+Wait for Codex to react (👀) and post a review.
+Codex posts a review on the pull request, just like a teammate would.
+Enable automatic reviews
+If you want Codex to review every pull request automatically, turn on
+Automatic reviews
+in
+Codex settings
+. Codex will post a review whenever a new PR is opened for review, without needing an
+@codex review
+comment.
+Customize what Codex reviews
+Codex searches your repository for
+AGENTS.md
+files and follows any
+Review guidelines
+you include.
+To set guidelines for a repository, add or update a top-level
+AGENTS.md
+with a section like this:
+## Review guidelines
+-
+Don't log PII.
+-
+Verify that authentication middleware wraps every route.
+Codex applies guidance from the closest
+AGENTS.md
+to each changed file. You can place more specific instructions deeper in the tree when particular packages need extra scrutiny.
+For a one-off focus, add it to your pull request comment, for example:
+@codex review for security regressions
+In GitHub, Codex flags only P0 and P1 issues. If you want Codex to flag typos in documentation, add guidance in
+AGENTS.md
+(for example, “Treat typos in docs as P1.”).
+Give Codex other tasks
+If you mention
+@codex
+in a comment with anything other than
+review
+, Codex starts a
+cloud task
+using your pull request as context.
+@codex fix the CI failures

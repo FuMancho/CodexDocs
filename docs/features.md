@@ -16,11 +16,17 @@ To get the best suggestions, craft clear prompt comments:
 > If a suggestion isn't quite right, you don't use the mouse! Keep typing part of the solution you want to steer the model, and the Ghost Text will dynamically recalculate.
 
 ## Copilot Chat
-Copilot Chat provides a conversational interface within your IDE. You can ask it to:
+Copilot Chat provides a conversational interface within your IDE, acting as a pair programmer. You can ask it to:
 *   Generate unit tests for a specific function.
 *   Find bugs in the highlighted code snippet.
 *   Explain an unfamiliar codebase.
 *   Propose a structural refactor.
+
+### Context Awareness
+GitHub Copilot uses multiple techniques to understand your intent:
+1.  **Cursor Position:** The most heavily weighted context is what is directly above and below your cursor.
+2.  **Open Tabs:** Copilot scans the contents of other files currently open in your IDE. To improve suggestions, keep relevant files (like interfaces, types, and utility functions) open in tabs.
+3.  **Path and Filename:** Copilot uses the name of the file and its path to determine the language and framework conventions.
 
 ### Slash Commands and Variables
 Inside the chat, you can use specialized slash commands and variables to route context efficiently.

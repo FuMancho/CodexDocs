@@ -21,6 +21,18 @@ GitHub Copilot is available as an extension for a variety of popular IDEs:
 4. Once installed, a toast notification will prompt you to sign in to GitHub.
 5. Follow the authentication prompts in your browser.
 
+### JetBrains IDEs Setup (IntelliJ, PyCharm, etc.)
+1. Go to **File > Settings** (or **Preferences** on macOS), then select **Plugins**.
+2. Click the **Marketplace** tab and search for **GitHub Copilot**.
+3. Click **Install**. Wait for the installation to finish, and click **Restart IDE**.
+4. After restarting, click the Copilot icon in the status bar and log in to GitHub.
+
+### Visual Studio (Windows) Setup
+1. Open Visual Studio and go to **Extensions > Manage Extensions**.
+2. Search and download **GitHub Copilot** from the Online section.
+3. Close Visual Studio to trigger the VSIX installer. Allow the installation to complete.
+4. Re-open Visual Studio and sign in to your GitHub account when prompted.
+
 > [!NOTE]
 > Copilot Business and Enterprise users can explicitly toggle Codex and Claude models on or off via their organizational settings on GitHub.com.
 

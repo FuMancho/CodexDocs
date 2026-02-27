@@ -1,0 +1,385 @@
+URL: https://developers.openai.com/codex/ide/features
+Scraped: 2026-02-27T16:31:16.841571+00:00
+
+Codex IDE extension features
+Search the Codex docs
+Primary navigation
+Get started
+Overview
+Quickstart
+Models
+Pricing
+Libraries
+Latest: GPT-5.2
+Core concepts
+Text generation
+Code generation
+Images and vision
+Audio and speech
+Structured output
+Function calling
+Responses API
+Agents
+Overview
+Build agents
+Agent Builder
+Node reference
+Safety in building agents
+Agents SDK
+Deploy in your product
+ChatKit
+Custom theming
+Widgets
+Actions
+Advanced integration
+Optimize
+Agent evals
+Trace grading
+Voice agents
+Tools
+Using tools
+Connectors and MCP
+Skills
+Shell
+Web search
+Code interpreter
+File search and retrieval
+File search
+Retrieval
+More tools
+Image generation
+Computer use
+Local shell tool
+Apply patch
+Run and scale
+Conversation state
+Background mode
+Streaming
+WebSocket mode
+Webhooks
+File inputs
+Context management
+Compaction
+Counting tokens
+Prompt caching
+Prompting
+Overview
+Prompt engineering
+Reasoning
+Reasoning models
+Reasoning best practices
+Evaluation
+Getting started
+Working with evals
+Prompt optimizer
+External models
+Best practices
+Realtime API
+Overview
+Connect
+WebRTC
+WebSocket
+SIP
+Usage
+Using realtime models
+Managing conversations
+Webhooks and server-side controls
+Managing costs
+Realtime transcription
+Voice agents
+Model optimization
+Optimization cycle
+Fine-tuning
+Supervised fine-tuning
+Vision fine-tuning
+Direct preference optimization
+Reinforcement fine-tuning
+RFT use cases
+Best practices
+Graders
+Specialized models
+Image generation
+Video generation
+Text to speech
+Speech to text
+Deep research
+Embeddings
+Moderation
+Going live
+Production best practices
+Latency optimization
+Overview
+Predicted Outputs
+Priority processing
+Cost optimization
+Overview
+Batch
+Flex processing
+Accuracy optimization
+Safety
+Safety best practices
+Safety checks
+Cybersecurity checks
+Under 18 API Guidance
+Legacy APIs
+Assistants API
+Migration guide
+Deep dive
+Tools
+Resources
+Terms and policies
+Changelog
+Your data
+Permissions
+Rate limits
+Deprecations
+MCP for deep research
+Developer mode
+ChatGPT Actions
+Introduction
+Getting started
+Actions library
+Authentication
+Production
+Data retrieval
+Sending files
+Getting Started
+Overview
+Quickstart
+Explore
+Pricing
+Concepts
+Prompting
+Customization
+Multi-agents
+Workflows
+Models
+Cyber Safety
+Using Codex
+App
+Overview
+Features
+Settings
+Review
+Automations
+Worktrees
+Local Environments
+Commands
+Troubleshooting
+IDE Extension
+Overview
+Features
+Settings
+IDE Commands
+Slash commands
+CLI
+Overview
+Features
+Command Line Options
+Slash commands
+Web
+Overview
+Environments
+Internet Access
+Integrations
+GitHub
+Slack
+Linear
+Configuration
+Config File
+Config Basics
+Advanced Config
+Config Reference
+Sample Config
+Rules
+AGENTS.md
+MCP
+Skills
+Multi-agents
+Administration
+Authentication
+Security
+Enterprise
+Admin Setup
+Governance
+Managed configuration
+Windows
+Automation
+Non-interactive Mode
+Codex SDK
+App Server
+MCP Server
+GitHub Action
+Learn
+Videos
+Blog
+Building frontend UIs with Codex and Figma
+Testing Agent Skills Systematically with Evals
+View all
+Cookbooks
+Codex Prompting Guide
+Long horizon tasks with Codex
+View all
+Building AI Teams
+Community
+Ambassadors
+Meetups
+Releases
+Changelog
+Feature Maturity
+Open Source
+Home
+Quickstart
+Core Concepts
+MCP Apps in ChatGPT
+MCP Server
+UX principles
+UI guidelines
+Plan
+Research use cases
+Define tools
+Design components
+Build
+Set up your server
+Build your ChatGPT UI
+Authenticate users
+Manage state
+Monetize your app
+Examples
+Deploy
+Deploy your app
+Connect from ChatGPT
+Test your integration
+Submit your app
+Guides
+Optimize Metadata
+Security & Privacy
+Troubleshooting
+Resources
+Changelog
+App submission guidelines
+Reference
+Home
+Guides
+Get started
+Key concepts
+Production readiness
+Commerce specs
+Agentic Checkout
+Delegated Payment
+Product feeds
+Overview
+Onboarding
+Feed spec
+Best practices
+Home
+Docs MCP
+Categories
+Code
+Cookbooks
+Guides
+Videos
+Topics
+Agents
+Audio & Voice
+Computer use
+Codex
+Evals
+gpt-oss
+Fine-tuning
+Image generation
+Scaling
+Tools
+Video generation
+Home
+Topics
+Agents
+Evals
+Multimodal
+Text
+Guardrails
+Optimization
+ChatGPT
+Codex
+gpt-oss
+Contribute
+Cookbook on GitHub
+All posts
+Recent
+Building frontend UIs with Codex and Figma
+Shell + Skills + Compaction: Tips for long-running agents that do real work
+15 lessons learned building ChatGPT Apps
+Testing Agent Skills Systematically with Evals
+Supercharging Codex with JetBrains MCP at Skyscanner
+Topics
+General
+API
+Apps SDK
+Audio
+Codex
+API Dashboard
+The Codex IDE extension gives you access to Codex directly in VS Code, Cursor, Windsurf, and other VS Code-compatible editors. It uses the same agent as the Codex CLI and shares the same configuration.
+Prompting Codex
+Use Codex in your editor to chat, edit, and preview changes seamlessly. When Codex has context from open files and selected code, you can write shorter prompts and get faster, more relevant results.
+You can reference any file in your editor by tagging it in your prompt like this:
+Use @example.tsx as a reference to add a new page named "Resources" to the app that contains a list of resources defined in @resources.ts
+Switch between models
+You can switch models with the switcher under the chat input.
+Adjust reasoning effort
+You can adjust reasoning effort to control how long Codex thinks before responding. Higher effort can help on complex tasks, but responses take longer. Higher effort also uses more tokens and can consume your rate limits faster (especially with GPT-5-Codex).
+Use the same model switcher shown above, and choose
+low
+,
+medium
+, or
+high
+for each model. Start with
+medium
+, and only switch to
+high
+when you need more depth.
+Choose an approval mode
+By default, Codex runs in
+Agent
+mode. In this mode, Codex can read files, make edits, and run commands in the working directory automatically. Codex still needs your approval to work outside the working directory or access the network.
+When you just want to chat, or you want to plan before making changes, switch to
+Chat
+with the switcher under the chat input.
+If you need Codex to read files, make edits, and run commands with network access without approval, use
+Agent (Full Access)
+. Exercise caution before doing so.
+Cloud delegation
+You can offload larger jobs to Codex in the cloud, then track progress and review results without leaving your IDE.
+Set up a
+cloud environment for Codex
+.
+Pick your environment and select
+Run in the cloud
+.
+You can have Codex run from
+main
+(useful for starting new ideas), or run from your local changes (useful for finishing a task).
+When you start a cloud task from a local conversation, Codex remembers the conversation context so it can pick up where you left off.
+Cloud task follow-up
+The Codex extension makes previewing cloud changes straightforward. You can ask for follow-ups to run in the cloud, but often you’ll want to apply the changes locally to test and finish. When you continue the conversation locally, Codex also retains context to save you time.
+You can also view the cloud tasks in the
+Codex cloud interface
+.
+Web search
+Codex ships with a first-party web search tool. For local tasks in the Codex IDE Extension, Codex enables web search by default and serves results from a web search cache. The cache is an OpenAI-maintained index of web results, so cached mode returns pre-indexed results instead of fetching live pages. This reduces exposure to prompt injection from arbitrary live content, but you should still treat web results as untrusted. If you configure your sandbox for
+full access
+, web search defaults to live results. See
+Config basics
+to disable web search or switch to live results that fetch the most recent data.
+You’ll see
+web_search
+items in the transcript or
+codex exec --json
+output whenever Codex looks something up.
+Drag and drop images into the prompt
+You can drag and drop images into the prompt composer to include them as context.
+Hold down
+Shift
+while dropping an image. VS Code otherwise prevents extensions from accepting a drop.
+See also
+Codex IDE extension settings

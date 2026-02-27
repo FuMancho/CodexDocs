@@ -1,0 +1,388 @@
+URL: https://developers.openai.com/codex/integrations/slack
+Scraped: 2026-02-27T16:31:23.083959+00:00
+
+Use Codex in Slack
+Search the Codex docs
+Primary navigation
+Get started
+Overview
+Quickstart
+Models
+Pricing
+Libraries
+Latest: GPT-5.2
+Core concepts
+Text generation
+Code generation
+Images and vision
+Audio and speech
+Structured output
+Function calling
+Responses API
+Agents
+Overview
+Build agents
+Agent Builder
+Node reference
+Safety in building agents
+Agents SDK
+Deploy in your product
+ChatKit
+Custom theming
+Widgets
+Actions
+Advanced integration
+Optimize
+Agent evals
+Trace grading
+Voice agents
+Tools
+Using tools
+Connectors and MCP
+Skills
+Shell
+Web search
+Code interpreter
+File search and retrieval
+File search
+Retrieval
+More tools
+Image generation
+Computer use
+Local shell tool
+Apply patch
+Run and scale
+Conversation state
+Background mode
+Streaming
+WebSocket mode
+Webhooks
+File inputs
+Context management
+Compaction
+Counting tokens
+Prompt caching
+Prompting
+Overview
+Prompt engineering
+Reasoning
+Reasoning models
+Reasoning best practices
+Evaluation
+Getting started
+Working with evals
+Prompt optimizer
+External models
+Best practices
+Realtime API
+Overview
+Connect
+WebRTC
+WebSocket
+SIP
+Usage
+Using realtime models
+Managing conversations
+Webhooks and server-side controls
+Managing costs
+Realtime transcription
+Voice agents
+Model optimization
+Optimization cycle
+Fine-tuning
+Supervised fine-tuning
+Vision fine-tuning
+Direct preference optimization
+Reinforcement fine-tuning
+RFT use cases
+Best practices
+Graders
+Specialized models
+Image generation
+Video generation
+Text to speech
+Speech to text
+Deep research
+Embeddings
+Moderation
+Going live
+Production best practices
+Latency optimization
+Overview
+Predicted Outputs
+Priority processing
+Cost optimization
+Overview
+Batch
+Flex processing
+Accuracy optimization
+Safety
+Safety best practices
+Safety checks
+Cybersecurity checks
+Under 18 API Guidance
+Legacy APIs
+Assistants API
+Migration guide
+Deep dive
+Tools
+Resources
+Terms and policies
+Changelog
+Your data
+Permissions
+Rate limits
+Deprecations
+MCP for deep research
+Developer mode
+ChatGPT Actions
+Introduction
+Getting started
+Actions library
+Authentication
+Production
+Data retrieval
+Sending files
+Getting Started
+Overview
+Quickstart
+Explore
+Pricing
+Concepts
+Prompting
+Customization
+Multi-agents
+Workflows
+Models
+Cyber Safety
+Using Codex
+App
+Overview
+Features
+Settings
+Review
+Automations
+Worktrees
+Local Environments
+Commands
+Troubleshooting
+IDE Extension
+Overview
+Features
+Settings
+IDE Commands
+Slash commands
+CLI
+Overview
+Features
+Command Line Options
+Slash commands
+Web
+Overview
+Environments
+Internet Access
+Integrations
+GitHub
+Slack
+Linear
+Configuration
+Config File
+Config Basics
+Advanced Config
+Config Reference
+Sample Config
+Rules
+AGENTS.md
+MCP
+Skills
+Multi-agents
+Administration
+Authentication
+Security
+Enterprise
+Admin Setup
+Governance
+Managed configuration
+Windows
+Automation
+Non-interactive Mode
+Codex SDK
+App Server
+MCP Server
+GitHub Action
+Learn
+Videos
+Blog
+Building frontend UIs with Codex and Figma
+Testing Agent Skills Systematically with Evals
+View all
+Cookbooks
+Codex Prompting Guide
+Long horizon tasks with Codex
+View all
+Building AI Teams
+Community
+Ambassadors
+Meetups
+Releases
+Changelog
+Feature Maturity
+Open Source
+Home
+Quickstart
+Core Concepts
+MCP Apps in ChatGPT
+MCP Server
+UX principles
+UI guidelines
+Plan
+Research use cases
+Define tools
+Design components
+Build
+Set up your server
+Build your ChatGPT UI
+Authenticate users
+Manage state
+Monetize your app
+Examples
+Deploy
+Deploy your app
+Connect from ChatGPT
+Test your integration
+Submit your app
+Guides
+Optimize Metadata
+Security & Privacy
+Troubleshooting
+Resources
+Changelog
+App submission guidelines
+Reference
+Home
+Guides
+Get started
+Key concepts
+Production readiness
+Commerce specs
+Agentic Checkout
+Delegated Payment
+Product feeds
+Overview
+Onboarding
+Feed spec
+Best practices
+Home
+Docs MCP
+Categories
+Code
+Cookbooks
+Guides
+Videos
+Topics
+Agents
+Audio & Voice
+Computer use
+Codex
+Evals
+gpt-oss
+Fine-tuning
+Image generation
+Scaling
+Tools
+Video generation
+Home
+Topics
+Agents
+Evals
+Multimodal
+Text
+Guardrails
+Optimization
+ChatGPT
+Codex
+gpt-oss
+Contribute
+Cookbook on GitHub
+All posts
+Recent
+Building frontend UIs with Codex and Figma
+Shell + Skills + Compaction: Tips for long-running agents that do real work
+15 lessons learned building ChatGPT Apps
+Testing Agent Skills Systematically with Evals
+Supercharging Codex with JetBrains MCP at Skyscanner
+Topics
+General
+API
+Apps SDK
+Audio
+Codex
+API Dashboard
+Use Codex in Slack to kick off coding tasks from channels and threads. Mention
+@Codex
+with a prompt, and Codex creates a cloud task and replies with the results.
+Set up the Slack app
+Set up
+Codex cloud tasks
+. You need a Plus, Pro, Business, Enterprise, or Edu plan (see
+ChatGPT pricing
+), a connected GitHub account, and at least one
+environment
+.
+Go to
+Codex settings
+and install the Slack app for your workspace. Depending on your Slack workspace policies, an admin may need to approve the install.
+Add
+@Codex
+to a channel. If you haven’t added it yet, Slack prompts you when you mention it.
+Start a task
+In a channel or thread, mention
+@Codex
+and include your prompt. Codex can reference earlier messages in the thread, so you often don’t need to restate context.
+(Optional) Specify an environment or repository in your prompt, for example:
+@Codex fix the above in openai/codex
+.
+Wait for Codex to react (👀) and reply with a link to the task. When it finishes, Codex posts the result and, depending on your settings, an answer in the thread.
+How Codex chooses an environment and repo
+Codex reviews the environments you have access to and selects the one that best matches your request. If the request is ambiguous, it falls back to the environment you used most recently.
+The task runs against the default branch of the first repository listed in that environment’s repo map. Update the repo map in Codex if you need a different default or more repositories.
+If no suitable environment or repository is available, Codex will reply in Slack with instructions on how to fix the issue before retrying.
+Enterprise data controls
+By default, Codex replies in the thread with an answer, which can include information from the environment it ran in.
+To prevent this, an Enterprise admin can clear
+Allow Codex Slack app to post answers on task completion
+in
+ChatGPT workspace settings
+. When an admin turns off answers, Codex replies only with a link to the task.
+Data usage, privacy, and security
+When you mention
+@Codex
+, Codex receives your message and thread history to understand your request and create a task.
+Data handling follows OpenAI’s
+Privacy Policy
+,
+Terms of Use
+, and other applicable
+policies
+.
+For more on security, see the Codex
+security documentation
+.
+Codex uses large language models that can make mistakes. Always review answers and diffs.
+Tips and troubleshooting
+Missing connections
+: If Codex can’t confirm your Slack or GitHub connection, it replies with a link to reconnect.
+Unexpected environment choice
+: Reply in the thread with the environment you want (for example,
+Please run this in openai/openai (applied)
+), then mention
+@Codex
+again.
+Long or complex threads
+: Summarize key details in your latest message so Codex doesn’t miss context buried earlier in the thread.
+Workspace posting
+: Some Enterprise workspaces restrict posting final answers. In those cases, open the task link to view progress and results.
+More help
+: See the
+OpenAI Help Center
+.

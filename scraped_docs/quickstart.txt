@@ -1,0 +1,418 @@
+URL: https://developers.openai.com/codex/quickstart
+Scraped: 2026-02-27T16:31:06.089608+00:00
+
+Quickstart
+Search the Codex docs
+Primary navigation
+Get started
+Overview
+Quickstart
+Models
+Pricing
+Libraries
+Latest: GPT-5.2
+Core concepts
+Text generation
+Code generation
+Images and vision
+Audio and speech
+Structured output
+Function calling
+Responses API
+Agents
+Overview
+Build agents
+Agent Builder
+Node reference
+Safety in building agents
+Agents SDK
+Deploy in your product
+ChatKit
+Custom theming
+Widgets
+Actions
+Advanced integration
+Optimize
+Agent evals
+Trace grading
+Voice agents
+Tools
+Using tools
+Connectors and MCP
+Skills
+Shell
+Web search
+Code interpreter
+File search and retrieval
+File search
+Retrieval
+More tools
+Image generation
+Computer use
+Local shell tool
+Apply patch
+Run and scale
+Conversation state
+Background mode
+Streaming
+WebSocket mode
+Webhooks
+File inputs
+Context management
+Compaction
+Counting tokens
+Prompt caching
+Prompting
+Overview
+Prompt engineering
+Reasoning
+Reasoning models
+Reasoning best practices
+Evaluation
+Getting started
+Working with evals
+Prompt optimizer
+External models
+Best practices
+Realtime API
+Overview
+Connect
+WebRTC
+WebSocket
+SIP
+Usage
+Using realtime models
+Managing conversations
+Webhooks and server-side controls
+Managing costs
+Realtime transcription
+Voice agents
+Model optimization
+Optimization cycle
+Fine-tuning
+Supervised fine-tuning
+Vision fine-tuning
+Direct preference optimization
+Reinforcement fine-tuning
+RFT use cases
+Best practices
+Graders
+Specialized models
+Image generation
+Video generation
+Text to speech
+Speech to text
+Deep research
+Embeddings
+Moderation
+Going live
+Production best practices
+Latency optimization
+Overview
+Predicted Outputs
+Priority processing
+Cost optimization
+Overview
+Batch
+Flex processing
+Accuracy optimization
+Safety
+Safety best practices
+Safety checks
+Cybersecurity checks
+Under 18 API Guidance
+Legacy APIs
+Assistants API
+Migration guide
+Deep dive
+Tools
+Resources
+Terms and policies
+Changelog
+Your data
+Permissions
+Rate limits
+Deprecations
+MCP for deep research
+Developer mode
+ChatGPT Actions
+Introduction
+Getting started
+Actions library
+Authentication
+Production
+Data retrieval
+Sending files
+Getting Started
+Overview
+Quickstart
+Explore
+Pricing
+Concepts
+Prompting
+Customization
+Multi-agents
+Workflows
+Models
+Cyber Safety
+Using Codex
+App
+Overview
+Features
+Settings
+Review
+Automations
+Worktrees
+Local Environments
+Commands
+Troubleshooting
+IDE Extension
+Overview
+Features
+Settings
+IDE Commands
+Slash commands
+CLI
+Overview
+Features
+Command Line Options
+Slash commands
+Web
+Overview
+Environments
+Internet Access
+Integrations
+GitHub
+Slack
+Linear
+Configuration
+Config File
+Config Basics
+Advanced Config
+Config Reference
+Sample Config
+Rules
+AGENTS.md
+MCP
+Skills
+Multi-agents
+Administration
+Authentication
+Security
+Enterprise
+Admin Setup
+Governance
+Managed configuration
+Windows
+Automation
+Non-interactive Mode
+Codex SDK
+App Server
+MCP Server
+GitHub Action
+Learn
+Videos
+Blog
+Building frontend UIs with Codex and Figma
+Testing Agent Skills Systematically with Evals
+View all
+Cookbooks
+Codex Prompting Guide
+Long horizon tasks with Codex
+View all
+Building AI Teams
+Community
+Ambassadors
+Meetups
+Releases
+Changelog
+Feature Maturity
+Open Source
+Home
+Quickstart
+Core Concepts
+MCP Apps in ChatGPT
+MCP Server
+UX principles
+UI guidelines
+Plan
+Research use cases
+Define tools
+Design components
+Build
+Set up your server
+Build your ChatGPT UI
+Authenticate users
+Manage state
+Monetize your app
+Examples
+Deploy
+Deploy your app
+Connect from ChatGPT
+Test your integration
+Submit your app
+Guides
+Optimize Metadata
+Security & Privacy
+Troubleshooting
+Resources
+Changelog
+App submission guidelines
+Reference
+Home
+Guides
+Get started
+Key concepts
+Production readiness
+Commerce specs
+Agentic Checkout
+Delegated Payment
+Product feeds
+Overview
+Onboarding
+Feed spec
+Best practices
+Home
+Docs MCP
+Categories
+Code
+Cookbooks
+Guides
+Videos
+Topics
+Agents
+Audio & Voice
+Computer use
+Codex
+Evals
+gpt-oss
+Fine-tuning
+Image generation
+Scaling
+Tools
+Video generation
+Home
+Topics
+Agents
+Evals
+Multimodal
+Text
+Guardrails
+Optimization
+ChatGPT
+Codex
+gpt-oss
+Contribute
+Cookbook on GitHub
+All posts
+Recent
+Building frontend UIs with Codex and Figma
+Shell + Skills + Compaction: Tips for long-running agents that do real work
+15 lessons learned building ChatGPT Apps
+Testing Agent Skills Systematically with Evals
+Supercharging Codex with JetBrains MCP at Skyscanner
+Topics
+General
+API
+Apps SDK
+Audio
+Codex
+API Dashboard
+ChatGPT Plus, Pro, Business, Edu, and Enterprise plans include Codex. Using Codex with your ChatGPT subscription gives you access to the latest Codex models and features.
+You can also use Codex with API credits by signing in with an OpenAI API key.
+For a limited time,
+try Codex for free in ChatGPT Free and Go
+, or enjoy
+2x Codex rate limits
+with Plus, Pro, Business and Enterprise
+subscriptions.
+Setup
+Choose an option
+The Codex app is available on macOS (Apple Silicon).
+Download and install the Codex app
+The Codex app is currently only available for macOS.
+Download for macOS
+Get notified for Windows and Linux
+Open Codex and sign in
+Once you downloaded and installed the Codex app, open it and sign in with your ChatGPT account or an OpenAI API key.
+If you sign in with an OpenAI API key, some functionality such as
+cloud threads
+might not be available.
+Select a project
+Choose a project folder that you want Codex to work in.
+If you used the Codex app, CLI, or IDE Extension before you’ll see past projects that you worked on.
+Send your first message
+After choosing the project, make sure
+Local
+is selected to have Codex work on your machine and send your first message to Codex.
+You can ask Codex anything about the project or your computer in general. Here are some examples:
+If you need more inspiration, check out the
+explore section
+.
+Learn more about the Codex app
+Install the Codex extension for your IDE.
+Install the Codex extension
+Download it for your editor:
+Download for Visual Studio Code
+Download for Cursor
+Download for Windsurf
+Download for Visual Studio Code Insiders
+Open the Codex panel
+Once installed, the Codex extension appears in the sidebar alongside your other extensions. It may be hidden in the collapsed section. You can move the Codex panel to the right side of the editor if you prefer.
+Sign in and start your first task
+Sign in with your ChatGPT account or an API key to get started.
+Codex starts in Agent mode by default, which lets it read files, run commands, and write changes in your project directory.
+Use Git checkpoints
+Codex can modify your codebase, so consider creating Git checkpoints before and after each task so you can easily revert changes if needed.
+Learn more about the Codex IDE extension
+The Codex CLI is supported on macOS, Windows, and Linux.
+Install the Codex CLI
+Install with npm:
+npm
+install
+-g
+@openai/codex
+Install with Homebrew:
+brew
+install
+codex
+Run
+codex
+and sign in
+Run
+codex
+in your terminal to get started. You’ll be prompted to sign in with your ChatGPT account or an API key.
+Ask Codex to work in your current directory
+Once authenticated, you can ask Codex to perform tasks in the current directory.
+Use Git checkpoints
+Codex can modify your codebase, so consider creating Git checkpoints before and after each task so you can easily revert changes if needed.
+Learn more about the Codex CLI
+Use Codex in the cloud at
+chatgpt.com/codex
+.
+Open Codex in your browser
+Go to
+chatgpt.com/codex
+. You can also delegate a task to Codex by tagging
+@codex
+in a GitHub pull request comment (requires signing in to ChatGPT).
+Set up an environment
+Before starting your first task, set up an environment for Codex. Open the environment settings at
+chatgpt.com/codex
+and follow the steps to connect a GitHub repository.
+Launch a task and monitor progress
+Once your environment is ready, launch coding tasks from the
+Codex interface
+. You can monitor progress in real time by viewing logs, or let tasks run in the background.
+Review changes and create a pull request
+When a task completes, review the proposed changes in the diff view. You can iterate on the results or create a pull request directly in your GitHub repository.
+Codex also provides a preview of the changes. You can accept the PR as is, or check out the branch locally to test the changes:
+git
+fetch
+git
+checkout
+<
+branch-nam
+e
+>
+Learn more about Codex cloud

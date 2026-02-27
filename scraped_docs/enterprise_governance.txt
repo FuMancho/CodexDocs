@@ -1,0 +1,413 @@
+URL: https://developers.openai.com/codex/enterprise/governance
+Scraped: 2026-02-27T16:31:35.566088+00:00
+
+Governance
+Search the Codex docs
+Primary navigation
+Get started
+Overview
+Quickstart
+Models
+Pricing
+Libraries
+Latest: GPT-5.2
+Core concepts
+Text generation
+Code generation
+Images and vision
+Audio and speech
+Structured output
+Function calling
+Responses API
+Agents
+Overview
+Build agents
+Agent Builder
+Node reference
+Safety in building agents
+Agents SDK
+Deploy in your product
+ChatKit
+Custom theming
+Widgets
+Actions
+Advanced integration
+Optimize
+Agent evals
+Trace grading
+Voice agents
+Tools
+Using tools
+Connectors and MCP
+Skills
+Shell
+Web search
+Code interpreter
+File search and retrieval
+File search
+Retrieval
+More tools
+Image generation
+Computer use
+Local shell tool
+Apply patch
+Run and scale
+Conversation state
+Background mode
+Streaming
+WebSocket mode
+Webhooks
+File inputs
+Context management
+Compaction
+Counting tokens
+Prompt caching
+Prompting
+Overview
+Prompt engineering
+Reasoning
+Reasoning models
+Reasoning best practices
+Evaluation
+Getting started
+Working with evals
+Prompt optimizer
+External models
+Best practices
+Realtime API
+Overview
+Connect
+WebRTC
+WebSocket
+SIP
+Usage
+Using realtime models
+Managing conversations
+Webhooks and server-side controls
+Managing costs
+Realtime transcription
+Voice agents
+Model optimization
+Optimization cycle
+Fine-tuning
+Supervised fine-tuning
+Vision fine-tuning
+Direct preference optimization
+Reinforcement fine-tuning
+RFT use cases
+Best practices
+Graders
+Specialized models
+Image generation
+Video generation
+Text to speech
+Speech to text
+Deep research
+Embeddings
+Moderation
+Going live
+Production best practices
+Latency optimization
+Overview
+Predicted Outputs
+Priority processing
+Cost optimization
+Overview
+Batch
+Flex processing
+Accuracy optimization
+Safety
+Safety best practices
+Safety checks
+Cybersecurity checks
+Under 18 API Guidance
+Legacy APIs
+Assistants API
+Migration guide
+Deep dive
+Tools
+Resources
+Terms and policies
+Changelog
+Your data
+Permissions
+Rate limits
+Deprecations
+MCP for deep research
+Developer mode
+ChatGPT Actions
+Introduction
+Getting started
+Actions library
+Authentication
+Production
+Data retrieval
+Sending files
+Getting Started
+Overview
+Quickstart
+Explore
+Pricing
+Concepts
+Prompting
+Customization
+Multi-agents
+Workflows
+Models
+Cyber Safety
+Using Codex
+App
+Overview
+Features
+Settings
+Review
+Automations
+Worktrees
+Local Environments
+Commands
+Troubleshooting
+IDE Extension
+Overview
+Features
+Settings
+IDE Commands
+Slash commands
+CLI
+Overview
+Features
+Command Line Options
+Slash commands
+Web
+Overview
+Environments
+Internet Access
+Integrations
+GitHub
+Slack
+Linear
+Configuration
+Config File
+Config Basics
+Advanced Config
+Config Reference
+Sample Config
+Rules
+AGENTS.md
+MCP
+Skills
+Multi-agents
+Administration
+Authentication
+Security
+Enterprise
+Admin Setup
+Governance
+Managed configuration
+Windows
+Automation
+Non-interactive Mode
+Codex SDK
+App Server
+MCP Server
+GitHub Action
+Learn
+Videos
+Blog
+Building frontend UIs with Codex and Figma
+Testing Agent Skills Systematically with Evals
+View all
+Cookbooks
+Codex Prompting Guide
+Long horizon tasks with Codex
+View all
+Building AI Teams
+Community
+Ambassadors
+Meetups
+Releases
+Changelog
+Feature Maturity
+Open Source
+Home
+Quickstart
+Core Concepts
+MCP Apps in ChatGPT
+MCP Server
+UX principles
+UI guidelines
+Plan
+Research use cases
+Define tools
+Design components
+Build
+Set up your server
+Build your ChatGPT UI
+Authenticate users
+Manage state
+Monetize your app
+Examples
+Deploy
+Deploy your app
+Connect from ChatGPT
+Test your integration
+Submit your app
+Guides
+Optimize Metadata
+Security & Privacy
+Troubleshooting
+Resources
+Changelog
+App submission guidelines
+Reference
+Home
+Guides
+Get started
+Key concepts
+Production readiness
+Commerce specs
+Agentic Checkout
+Delegated Payment
+Product feeds
+Overview
+Onboarding
+Feed spec
+Best practices
+Home
+Docs MCP
+Categories
+Code
+Cookbooks
+Guides
+Videos
+Topics
+Agents
+Audio & Voice
+Computer use
+Codex
+Evals
+gpt-oss
+Fine-tuning
+Image generation
+Scaling
+Tools
+Video generation
+Home
+Topics
+Agents
+Evals
+Multimodal
+Text
+Guardrails
+Optimization
+ChatGPT
+Codex
+gpt-oss
+Contribute
+Cookbook on GitHub
+All posts
+Recent
+Building frontend UIs with Codex and Figma
+Shell + Skills + Compaction: Tips for long-running agents that do real work
+15 lessons learned building ChatGPT Apps
+Testing Agent Skills Systematically with Evals
+Supercharging Codex with JetBrains MCP at Skyscanner
+Topics
+General
+API
+Apps SDK
+Audio
+Codex
+API Dashboard
+Governance and Observability
+Codex gives enterprise teams visibility into adoption and impact, plus the auditability needed for security and compliance programs. Use the self-serve dashboard for day-to-day tracking, the Analytics API for programmatic reporting, and the Compliance API to export detailed logs into your governance stack.
+Ways to track Codex usage
+There are three ways to monitor Codex usage, depending on what you need:
+Analytics Dashboard
+: quick visibility into adoption and code review impact.
+Analytics API
+: pull structured daily metrics into your data warehouse or BI tools.
+Compliance API
+: exports detailed activity logs for audit, monitoring, and investigations.
+Analytics Dashboard
+Dashboards
+The
+analytics dashboard
+allows ChatGPT workspace administrators to track feature adoption.
+Codex provides the following dashboards:
+Daily users by product (CLI, IDE, cloud, Code Review)
+Daily code review users
+Daily code reviews
+Code reviews by priority level
+Daily code reviews by feedback sentiment
+Daily cloud tasks
+Daily cloud users
+Daily VS Code extension users
+Daily CLI users
+Data export
+Administrators can also export Codex analytics data in CSV or JSON format. Codex provides the following export options:
+Code review users and reviews (Daily unique users and total reviews completed in Code Review)
+Code review findings and feedback (Daily counts of comments, reactions, replies, and priority-level findings)
+cloud users and tasks (daily unique cloud users and tasks completed)
+CLI and VS Code users (Daily unique users for the Codex CLI and VS Code extension)
+Sessions and messages per user (Daily session starts and user message counts for each Codex user across surfaces)
+Analytics API
+Use the
+Analytics API
+when you want to automate reporting, build internal dashboards, or join Codex metrics with your existing engineering data.
+What it measures
+The Analytics API provides daily, time-series metrics for a workspace, with optional per-user breakdowns and per-client usage.
+Endpoints
+Daily usage and adoption
+Daily totals for threads, turns, and credits
+Breakdown by client surface
+Optional per-user reporting for adoption and power-user analysis
+Code review activity
+Pull request reviews completed by Codex
+Total comments generated by Codex
+Severity breakdown of comments
+User engagement with code review
+Replies to Codex comments
+Reactions, including upvotes and downvotes
+Engagement breakdowns for how teams respond to Codex feedback
+How it works
+Analytics is daily and time-windowed. Results are time-ordered and returned in pages with cursor-based pagination. You can query by workspace and optionally group by user or aggregate at the workspace level.
+Common use cases
+Engineering observability dashboards
+Adoption reporting for leadership updates
+Usage governance and cost monitoring
+Compliance API
+Use the
+Compliance API
+when you need auditable records for security, legal, and governance workflows.
+What it measures
+The Compliance API gives enterprises a way to export logs and metadata for Codex activity so you can connect that data to your existing audit, monitoring, and security workflows. It is designed for use with tools like eDiscovery, DLP, SIEM, or other compliance systems.
+For Codex usage authenticated through ChatGPT, Compliance API exports provide audit records for Codex activity and can be used in investigations and compliance workflows. These audit logs are retained for up to 30 days. API-key-authenticated Codex usage follows your API organization settings and is not included in Compliance API exports.
+What you can export
+Activity logs
+Prompt text sent to Codex
+Responses Codex generated
+Identifiers such as workspace, user, timestamp, and model
+Token usage and related request metadata
+Metadata for audit and investigation
+Use record metadata to answer questions like:
+Who ran a task
+When it ran
+Which model was used
+How much content was processed
+Common use cases
+Security investigations
+Compliance reporting
+Policy enforcement audits
+Routing events into SIEM and eDiscovery pipelines
+What it does not provide
+Lines of code generated (a bit of a noisy proxy for productivity and can incentivize the wrong behavior)
+Acceptance rate of suggestions (almost 100% since users usually accept the change first)
+Code quality or performance KPIs
+Recommended pattern
+Most enterprises use a combination of:
+Analytics Dashboard
+for self-serve monitoring and quick answers
+Analytics API
+for automated reporting and BI integration
+Compliance API
+for audit exports and investigations

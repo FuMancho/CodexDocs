@@ -1,0 +1,413 @@
+URL: https://developers.openai.com/codex/models
+Scraped: 2026-02-27T16:31:10.014747+00:00
+
+Codex Models
+Search the Codex docs
+Primary navigation
+Get started
+Overview
+Quickstart
+Models
+Pricing
+Libraries
+Latest: GPT-5.2
+Core concepts
+Text generation
+Code generation
+Images and vision
+Audio and speech
+Structured output
+Function calling
+Responses API
+Agents
+Overview
+Build agents
+Agent Builder
+Node reference
+Safety in building agents
+Agents SDK
+Deploy in your product
+ChatKit
+Custom theming
+Widgets
+Actions
+Advanced integration
+Optimize
+Agent evals
+Trace grading
+Voice agents
+Tools
+Using tools
+Connectors and MCP
+Skills
+Shell
+Web search
+Code interpreter
+File search and retrieval
+File search
+Retrieval
+More tools
+Image generation
+Computer use
+Local shell tool
+Apply patch
+Run and scale
+Conversation state
+Background mode
+Streaming
+WebSocket mode
+Webhooks
+File inputs
+Context management
+Compaction
+Counting tokens
+Prompt caching
+Prompting
+Overview
+Prompt engineering
+Reasoning
+Reasoning models
+Reasoning best practices
+Evaluation
+Getting started
+Working with evals
+Prompt optimizer
+External models
+Best practices
+Realtime API
+Overview
+Connect
+WebRTC
+WebSocket
+SIP
+Usage
+Using realtime models
+Managing conversations
+Webhooks and server-side controls
+Managing costs
+Realtime transcription
+Voice agents
+Model optimization
+Optimization cycle
+Fine-tuning
+Supervised fine-tuning
+Vision fine-tuning
+Direct preference optimization
+Reinforcement fine-tuning
+RFT use cases
+Best practices
+Graders
+Specialized models
+Image generation
+Video generation
+Text to speech
+Speech to text
+Deep research
+Embeddings
+Moderation
+Going live
+Production best practices
+Latency optimization
+Overview
+Predicted Outputs
+Priority processing
+Cost optimization
+Overview
+Batch
+Flex processing
+Accuracy optimization
+Safety
+Safety best practices
+Safety checks
+Cybersecurity checks
+Under 18 API Guidance
+Legacy APIs
+Assistants API
+Migration guide
+Deep dive
+Tools
+Resources
+Terms and policies
+Changelog
+Your data
+Permissions
+Rate limits
+Deprecations
+MCP for deep research
+Developer mode
+ChatGPT Actions
+Introduction
+Getting started
+Actions library
+Authentication
+Production
+Data retrieval
+Sending files
+Getting Started
+Overview
+Quickstart
+Explore
+Pricing
+Concepts
+Prompting
+Customization
+Multi-agents
+Workflows
+Models
+Cyber Safety
+Using Codex
+App
+Overview
+Features
+Settings
+Review
+Automations
+Worktrees
+Local Environments
+Commands
+Troubleshooting
+IDE Extension
+Overview
+Features
+Settings
+IDE Commands
+Slash commands
+CLI
+Overview
+Features
+Command Line Options
+Slash commands
+Web
+Overview
+Environments
+Internet Access
+Integrations
+GitHub
+Slack
+Linear
+Configuration
+Config File
+Config Basics
+Advanced Config
+Config Reference
+Sample Config
+Rules
+AGENTS.md
+MCP
+Skills
+Multi-agents
+Administration
+Authentication
+Security
+Enterprise
+Admin Setup
+Governance
+Managed configuration
+Windows
+Automation
+Non-interactive Mode
+Codex SDK
+App Server
+MCP Server
+GitHub Action
+Learn
+Videos
+Blog
+Building frontend UIs with Codex and Figma
+Testing Agent Skills Systematically with Evals
+View all
+Cookbooks
+Codex Prompting Guide
+Long horizon tasks with Codex
+View all
+Building AI Teams
+Community
+Ambassadors
+Meetups
+Releases
+Changelog
+Feature Maturity
+Open Source
+Home
+Quickstart
+Core Concepts
+MCP Apps in ChatGPT
+MCP Server
+UX principles
+UI guidelines
+Plan
+Research use cases
+Define tools
+Design components
+Build
+Set up your server
+Build your ChatGPT UI
+Authenticate users
+Manage state
+Monetize your app
+Examples
+Deploy
+Deploy your app
+Connect from ChatGPT
+Test your integration
+Submit your app
+Guides
+Optimize Metadata
+Security & Privacy
+Troubleshooting
+Resources
+Changelog
+App submission guidelines
+Reference
+Home
+Guides
+Get started
+Key concepts
+Production readiness
+Commerce specs
+Agentic Checkout
+Delegated Payment
+Product feeds
+Overview
+Onboarding
+Feed spec
+Best practices
+Home
+Docs MCP
+Categories
+Code
+Cookbooks
+Guides
+Videos
+Topics
+Agents
+Audio & Voice
+Computer use
+Codex
+Evals
+gpt-oss
+Fine-tuning
+Image generation
+Scaling
+Tools
+Video generation
+Home
+Topics
+Agents
+Evals
+Multimodal
+Text
+Guardrails
+Optimization
+ChatGPT
+Codex
+gpt-oss
+Contribute
+Cookbook on GitHub
+All posts
+Recent
+Building frontend UIs with Codex and Figma
+Shell + Skills + Compaction: Tips for long-running agents that do real work
+15 lessons learned building ChatGPT Apps
+Testing Agent Skills Systematically with Evals
+Supercharging Codex with JetBrains MCP at Skyscanner
+Topics
+General
+API
+Apps SDK
+Audio
+Codex
+API Dashboard
+Recommended models
+gpt-5.3-codex
+Most capable agentic coding model to date, combining frontier coding performance with stronger reasoning and professional knowledge capabilities.
+codex -m gpt-5.3-codex
+Capability
+Speed
+Codex CLI & SDK
+Codex app & IDE extension
+Codex Cloud
+ChatGPT Credits
+API Access
+gpt-5.3-codex-spark
+Text-only research preview model optimized for near-instant, real-time coding iteration. Available to ChatGPT Pro users.
+codex -m gpt-5.3-codex-spark
+Capability
+Speed
+Codex CLI & SDK
+Codex app & IDE extension
+Codex Cloud
+ChatGPT Credits
+API Access
+gpt-5.2-codex
+Advanced coding model for real-world engineering. Succeeded by GPT-5.3-Codex.
+codex -m gpt-5.2-codex
+Capability
+Speed
+Codex CLI & SDK
+Codex app & IDE extension
+Codex Cloud
+ChatGPT Credits
+API Access
+For most coding tasks in Codex, start with gpt-5.3-codex. It is available for
+ChatGPT-authenticated Codex sessions in the Codex app, CLI, IDE extension, and
+Codex Cloud. API access for GPT-5.3-Codex will come soon. The
+gpt-5.3-codex-spark model is available in research preview for ChatGPT Pro
+subscribers.
+Alternative models
+gpt-5.2
+Our best general agentic model for tasks across industries and domains.
+codex -m gpt-5.2
+gpt-5.1-codex-max
+Optimized for long-horizon, agentic coding tasks in Codex.
+codex -m gpt-5.1-codex-max
+gpt-5.1
+Great for coding and agentic tasks across domains. Succeeded by GPT-5.2.
+codex -m gpt-5.1
+gpt-5.1-codex
+Optimized for long-running, agentic coding tasks in Codex. Succeeded by GPT-5.1-Codex-Max.
+codex -m gpt-5.1-codex
+gpt-5-codex
+Version of GPT-5 tuned for long-running, agentic coding tasks. Succeeded by GPT-5.1-Codex.
+codex -m gpt-5-codex
+gpt-5-codex-mini
+Smaller, more cost-effective version of GPT-5-Codex. Succeeded by GPT-5.1-Codex-Mini.
+codex -m gpt-5-codex
+gpt-5
+Reasoning model for coding and agentic tasks across domains. Succeeded by GPT-5.1.
+codex -m gpt-5
+Other models
+Codex works best with the models listed above.
+You can also point Codex at any model and provider that supports either the
+Chat Completions
+or
+Responses APIs
+to fit your specific use case.
+Support for the Chat Completions API is deprecated and will be removed in
+future releases of Codex.
+Configuring models
+Configure your default local model
+The Codex CLI and IDE extension use the same
+config.toml
+configuration file
+. To specify a model, add a
+model
+entry to your configuration file. If you don’t specify a model, the Codex app, CLI, or IDE Extension defaults to a recommended model.
+model =
+"gpt-5.2"
+Choosing a different local model temporarily
+In the Codex CLI, you can use the
+/model
+command during an active thread to change the model. In the IDE extension, you can use the model selector below the input box to choose your model.
+To start a new Codex CLI thread with a specific model or to specify the model for
+codex exec
+you can use the
+--model
+/
+-m
+flag:
+codex
+-m
+gpt-5.3-codex
+Choosing your model for cloud tasks
+Currently, you can’t change the default model for Codex cloud tasks.
