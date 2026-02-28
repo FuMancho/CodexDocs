@@ -20,7 +20,8 @@ This repository contains community-maintained documentation for the **OpenAI Cod
 python3 scripts/crawler.py \
   --start-url https://developers.openai.com/codex/cli/ \
   --base-path /codex/cli/ \
-  --output-repo .
+  --output-repo . \
+  --official-domains developers.openai.com
 ```
 
 This saves raw scraped text into `scraped_docs/`.
@@ -35,7 +36,7 @@ This saves raw scraped text into `scraped_docs/`.
 ### 3. Validate
 
 - Ensure all internal relative links resolve correctly.
-- Ensure all external links point to `developers.openai.com`.
+- Ensure all external links point to `developers.openai.com` (see Link Handling Policy below for third-party rules).
 - Verify heading hierarchy (`#` → `##` → `###`, no skipped levels).
 - Code blocks must specify a language (e.g., ` ```bash `).
 
@@ -54,6 +55,45 @@ docs: weekly documentation update [automated]
 - **Code:** Inline code uses single backticks. Code blocks use triple backticks with a language tag.
 - **Callouts:** Use GitHub-style alerts (`> [!NOTE]`, `> [!TIP]`, `> [!WARNING]`, etc.).
 - **Links:** Internal links use relative paths. External links point to verified official domains.
+
+## Link Handling Policy
+
+This is the most important section for autonomous operation. Follow these rules exactly:
+
+### Reference File
+
+Always consult `docs/official-links.md` as the single source of truth for verified URLs before writing any links.
+
+### Official Links
+
+- **Allowed domains:** `developers.openai.com`
+- When a link can be replaced with an official equivalent from `docs/official-links.md`, do so.
+
+### Third-Party Links — Decision Rules
+
+| Domain Type | Action | Example |
+|---|---|---|
+| GitHub repos (`github.com`) | ✅ **Keep** | `github.com/openai/codex` |
+| Package registries (`npmjs.com`, `pypi.org`) | ✅ **Keep** | `npmjs.com/package/@openai/codex` |
+| Cloud provider docs | ✅ **Keep** | Cloud integration guides |
+| Personal blogs, Medium, Dev.to | ❌ **Remove** | Replace with official equivalent or remove entirely |
+| Forums, Reddit, Stack Overflow | ❌ **Remove** | Not authoritative |
+| Unofficial mirrors or aggregators | ❌ **Remove** | Not trustworthy |
+
+### New Official Links
+
+If the crawler discovers new official pages not yet in `docs/official-links.md`, add them to the file in the correct section.
+
+### Dead Links
+
+If a link returns 404 or is unreachable (check `scraped_docs/_link_audit.md`), remove it and note the removal in the commit message.
+
+### Using the Link Audit Report
+
+After crawling, the file `scraped_docs/_link_audit.md` contains a pre-classified list of all discovered links:
+- ✅ **Official** — these are fine, no action needed
+- ⚠️ **Third-party** — apply the decision rules table above
+- ❌ **Dead** — remove from documentation
 
 ## Files to Ignore
 
