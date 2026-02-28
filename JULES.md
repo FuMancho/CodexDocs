@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This repository contains community-maintained documentation for the **OpenAI Codex CLI** (`@openai/codex`) — available as a CLI, desktop app, IDE extension, and cloud platform. Jules is responsible for keeping it up-to-date with the official source.
+This repository contains community-maintained documentation for the **OpenAI Codex CLI** (@openai/codex). Jules is responsible for keeping it up-to-date with the official source.
 
 ## Documentation Source
 
@@ -10,7 +10,7 @@ This repository contains community-maintained documentation for the **OpenAI Cod
 |---|---|
 | Start URL | `https://developers.openai.com/codex/cli/` |
 | Base Path | `/codex/cli/` |
-| Official Domain | `developers.openai.com` |
+| Official Domain | developers.openai.com |
 
 ## Weekly Update Procedure
 
@@ -44,7 +44,7 @@ This saves raw scraped text into `scraped_docs/`.
 ### 4. Validate
 
 - Ensure all internal relative links resolve correctly.
-- Ensure all external links point to `developers.openai.com` (see Link Handling Policy below for third-party rules).
+- Ensure all external links point to developers.openai.com (see Link Handling Policy below for third-party rules).
 - Verify heading hierarchy (`#` → `##` → `###`, no skipped levels).
 - Code blocks must specify a language (e.g., ` ```bash `).
 
@@ -74,7 +74,7 @@ Always consult `docs/official-links.md` as the single source of truth for verifi
 
 ### Official Links
 
-- **Allowed domains:** `developers.openai.com`
+- **Allowed domains:** developers.openai.com
 - When a link can be replaced with an official equivalent from `docs/official-links.md`, do so.
 
 ### Third-Party Links — Decision Rules
@@ -82,8 +82,8 @@ Always consult `docs/official-links.md` as the single source of truth for verifi
 | Domain Type | Action | Example |
 |---|---|---|
 | GitHub repos (`github.com`) | ✅ **Keep** | `github.com/openai/codex` |
-| Package registries (`npmjs.com`, `pypi.org`) | ✅ **Keep** | `npmjs.com/package/@openai/codex` |
-| Cloud provider docs | ✅ **Keep** | Cloud integration guides |
+| Package registries (`npmjs.com`, `pypi.org`) | ✅ **Keep** | Package pages |
+| Cloud provider docs | ✅ **Keep** | Integration guides |
 | Personal blogs, Medium, Dev.to | ❌ **Remove** | Replace with official equivalent or remove entirely |
 | Forums, Reddit, Stack Overflow | ❌ **Remove** | Not authoritative |
 | Unofficial mirrors or aggregators | ❌ **Remove** | Not trustworthy |
