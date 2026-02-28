@@ -1,5 +1,5 @@
 # Documentation Version
-- **Upstream Version:** unknown
+- **Upstream Version:** CLI 0.106.0 / App 26.226
 - **Last Crawl:** 2026-02-28
-- **Last Release Detected:** pending first check
-- **Crawler Version:** DocMaintainer@initial
+- **Last Release Detected:** CLI 0.106.0 (2026-02-26) — memories, js_repl, direct install
+- **Crawler Version:** DocMaintainer@1.0
