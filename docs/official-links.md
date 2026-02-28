@@ -87,3 +87,10 @@
 - [Changelog](https://developers.openai.com/codex/changelog)
 - [Feature Maturity](https://developers.openai.com/codex/feature-maturity)
 - [Open Source](https://developers.openai.com/codex/open-source)
+
+## Reference Sources (for Jules)
+- [GitHub — openai/codex](https://github.com/openai/codex)
+- [GitHub Releases Atom Feed](https://github.com/openai/codex/releases.atom)
+- [npm — @openai/codex](https://www.npmjs.com/package/@openai/codex)
+- [Codex CLI Changelog (detailed)](https://developers.openai.com/codex/changelog)
+
