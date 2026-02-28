@@ -1,45 +1,80 @@
-# Getting Started with GitHub Copilot (Codex)
+# Getting Started with OpenAI Codex
 
-GitHub Copilot is an AI pair programmer powered by OpenAI Codex. It helps you write code faster and with less work by offering autocomplete-style suggestions and interactive chat features.
+Codex is OpenAI's coding agent available as a native app, IDE extension, CLI, and cloud platform. It reads, edits, and runs code in your project directory. Codex is included with ChatGPT Plus, Pro, Business, Edu, and Enterprise plans.
+
+> [!NOTE]
+> Codex CLI is [open source](https://github.com/openai/codex) and built in Rust for speed and efficiency.
 
 ## Prerequisites
-To use GitHub Copilot, you must have an active GitHub Copilot subscription (Individual, Business, or Enterprise).
+
+- A **ChatGPT subscription** (Plus, Pro, Business, Edu, or Enterprise) or an **OpenAI API key**.
+- **npm** installed for CLI installation.
 
 ## Installation
 
-GitHub Copilot is available as an extension for a variety of popular IDEs:
-*   Visual Studio Code
-*   Visual Studio
-*   JetBrains IDEs (IntelliJ, PyCharm, WebStorm, etc.)
-*   Neovim
-*   Azure Data Studio
-
-### Visual Studio Code Setup
-1. Open the Extensions view (`Ctrl+Shift+X` or `Cmd+Shift+X`).
-2. Search for **GitHub Copilot**.
-3. Install both the **GitHub Copilot** extension and the **GitHub Copilot Chat** extension.
-4. Once installed, a toast notification will prompt you to sign in to GitHub.
-5. Follow the authentication prompts in your browser.
-
-### JetBrains IDEs Setup (IntelliJ, PyCharm, etc.)
-1. Go to **File > Settings** (or **Preferences** on macOS), then select **Plugins**.
-2. Click the **Marketplace** tab and search for **GitHub Copilot**.
-3. Click **Install**. Wait for the installation to finish, and click **Restart IDE**.
-4. After restarting, click the Copilot icon in the status bar and log in to GitHub.
-
-### Visual Studio (Windows) Setup
-1. Open Visual Studio and go to **Extensions > Manage Extensions**.
-2. Search and download **GitHub Copilot** from the Online section.
-3. Close Visual Studio to trigger the VSIX installer. Allow the installation to complete.
-4. Re-open Visual Studio and sign in to your GitHub account when prompted.
-
-> [!NOTE]
-> Copilot Business and Enterprise users can explicitly toggle Codex and Claude models on or off via their organizational settings on GitHub.com.
-
-## First Interaction
-Open a file and start typing a comment describing what you want:
-```javascript
-// Function to calculate the difference in days between two dates
-function
+```bash
+npm i -g @openai/codex
 ```
-As you type, Copilot will suggest the rest of the function in gray text (Ghost Text). Press `Tab` to accept the suggestion.
+
+> [!IMPORTANT]
+> Codex CLI is available on macOS and Linux. Windows support is experimental — for the best experience, use Codex in a WSL workspace. See the [Windows setup guide](https://developers.openai.com/codex/windows).
+
+## Authentication
+
+```bash
+codex
+```
+
+The first time you run Codex, you'll be prompted to sign in. Authenticate with your **ChatGPT account** or an **API key**.
+
+## First Session
+
+```mermaid
+flowchart LR
+    A["npm install"] --> B["Sign in"]
+    B --> C["cd into project"]
+    C --> D["Run codex"]
+    D --> E["Start prompting"]
+```
+
+1. Open a terminal in your project:
+
+   ```bash
+   cd /path/to/your/project
+   codex
+   ```
+
+2. Try some initial prompts:
+
+   ```text
+   Tell me about this project
+   Build a classic Snake game in this repo.
+   Find and fix bugs in my codebase with minimal, high-confidence changes.
+   ```
+
+> [!TIP]
+> Need inspiration? Check out the [Explore section](https://developers.openai.com/codex/explore) for example prompts and use cases.
+
+## Upgrade
+
+```bash
+npm i -g @openai/codex@latest
+```
+
+See the [Changelog](https://developers.openai.com/codex/changelog) for release notes.
+
+## Available Interfaces
+
+| Interface | Description | Link |
+|---|---|---|
+| **App** (macOS) | Native desktop application | [App Overview](https://developers.openai.com/codex/app) |
+| **IDE Extension** | VS Code, Cursor, Windsurf | [IDE Overview](https://developers.openai.com/codex/ide) |
+| **CLI** | Terminal-based agent | [CLI Overview](https://developers.openai.com/codex/cli) |
+| **Cloud / Web** | Cloud-based environments | [Cloud Overview](https://developers.openai.com/codex/cloud) |
+
+## What's Next?
+
+- [Quickstart](https://developers.openai.com/codex/quickstart) — Full setup across App, IDE, CLI, and Cloud
+- [CLI Features](https://developers.openai.com/codex/cli/features) — Interactive mode, multi-agent, code review, web search
+- [Configuration](https://developers.openai.com/codex/config-basic) — Config file, rules, AGENTS.md, MCP, skills
+- [CLI Reference](./commands.md) — Complete command-line options and flags

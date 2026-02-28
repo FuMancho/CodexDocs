@@ -1,42 +1,85 @@
-# Prompt Engineering for GitHub Copilot
+# Configuration & Customization
 
-Writing effective prompts (comments) for Copilot is an acquired skill. Follow these techniques to steer Codex toward exactly the implementation you want.
+Codex CLI uses a layered TOML-based configuration system. CLI flags override file settings for each invocation.
 
-## Comment-Driven Development
-Treat Copilot like an extremely junior developer. You write the specification in English, and Copilot types the implementation.
+## Configuration Files
 
-**Example workflow:**
-```python
-# Create a Flask app
-# Add a route for /health that returns a 200 JSON OK status
-# Add a route for /users that queries the SQLite database for all rows in the users table and returns them as JSON
-```
-By writing all these comments at once, Copilot understands the full scope and will begin generating the boilerplate line-by-line as you press `Tab` and `Enter`.
+Settings are read from `~/.codex/config.toml`. Use `--profile` to load named profiles within that file.
 
-## Best Practices
+```toml
+# ~/.codex/config.toml
 
-### 1. Give Context Before Action
-Don't just ask for an action out of context. Define the setup first.
-*   **Poor:** `// sort the list`
-*   **Better:** `// Given an array of User objects, sort them by the 'last_login' property in descending order.`
+model = "gpt-5.3-codex"
+web_search = "cached"
 
-### 2. Provide Examples of Expected Behavior
-If you need a specific data transformation, show Copilot what the input and output look like in the comments.
-```javascript
-/*
- * Function: slugifyTitle
- * Example Input: "Hello World 2024!"
- * Example Output: "hello-world-2024"
- */
-function slugifyTitle(title) {
+[sandbox]
+mode = "workspace-write"
+
+[tui]
+theme = "One Dark"
+alternate_screen = true
 ```
 
-### 3. Open Relevant Files
-Because Copilot uses "Neighboring Tabs" as context, always open the files that contain the classes, types, or utility functions you want it to use. If you are writing a React component, open the `Button.jsx` and `api.js` files in other tabs so Copilot knows their signatures.
+See [Config Reference](https://developers.openai.com/codex/config-reference) for all available keys and a [Sample Config](https://developers.openai.com/codex/config-sample).
 
-### 4. Nudge the Model
-If Copilot suggests something totally wrong, don't delete the comment—nudge the code directly. Type the first few characters of the variable or class you *want* it to use, and let it recalculate.
+## Configuration Precedence
 
-## Avoiding Anti-Patterns
-*   **Do not trust generated API keys or URLs**: Copilot may hallucinate endpoints or credentials based on open-source repositories.
-*   **Review all logic:** Copilot might use deprecated libraries or skip edge cases if they weren't explicitly called out in your prompt.
+```mermaid
+flowchart TD
+    A["CLI flags (highest)"] --> B["Environment variables"]
+    B --> C["~/.codex/config.toml"]
+    C --> D["Default values (lowest)"]
+```
+
+## AGENTS.md
+
+`AGENTS.md` is the project-level identity and instruction file for Codex — similar to Claude's `CLAUDE.md`. Place it in your repository root to provide persistent context:
+
+```markdown
+# AGENTS.md
+You are working on a TypeScript monorepo with React frontend and Express backend.
+Always use TypeScript strict mode and include JSDoc comments.
+```
+
+See [AGENTS.md Guide](https://developers.openai.com/codex/guides/agents-md).
+
+## Rules
+
+Rules define specific behaviors and constraints for Codex. See [Rules](https://developers.openai.com/codex/rules).
+
+## MCP (Model Context Protocol)
+
+Add third-party tools and context sources:
+
+```bash
+codex mcp                   # Manage MCP servers
+codex mcp-server            # Run Codex itself as an MCP server
+```
+
+See [MCP Configuration](https://developers.openai.com/codex/mcp).
+
+## Skills
+
+Skills are reusable task templates. Configure via the `[skills]` section in `config.toml`. See [Skills](https://developers.openai.com/codex/skills).
+
+## Multi-Agent Configuration
+
+Configure multi-agent workflows via the `[agents]` section in `config.toml`. See [Multi-Agent](https://developers.openai.com/codex/multi-agent).
+
+## Prompting Best Practices
+
+For effective results with Codex:
+
+- **Be specific** — Include filenames, expected behavior, and constraints.
+- **Use AGENTS.md** — Set project-level context once, reuse across sessions.
+- **Break complex tasks into steps** — Multi-step instructions yield better results.
+- **Use Cloud for long-running tasks** — Offload large refactors to Codex Cloud.
+
+See the [Codex Prompting Guide](https://developers.openai.com/codex/prompting) for detailed strategies.
+
+## See Also
+
+- [Config Basics](https://developers.openai.com/codex/config-basic)
+- [Advanced Config](https://developers.openai.com/codex/config-advanced)
+- [Security](https://developers.openai.com/codex/security)
+- [Enterprise Administration](https://developers.openai.com/codex/enterprise/admin-setup)

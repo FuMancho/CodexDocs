@@ -1,31 +1,63 @@
-# GitHub Copilot Integrations & Enterprise Features
+# Integrations & Environments
 
-GitHub Copilot extends beyond the local IDE when using Copilot Business or Copilot Enterprise, deeply integrating into the broader development lifecycle.
+Codex is available across multiple platforms and integrates with popular third-party services.
 
-## Copilot in the CLI
-GitHub Copilot in the CLI (`gh copilot`) brings the pair programmer to your terminal. It helps you remember shell commands or explain what a command does before you run it.
+## Platform Interfaces
 
-### Installation
-You must have the GitHub CLI installed. Then run:
-```bash
-gh extension install github/gh-copilot
+```mermaid
+flowchart TD
+    A["OpenAI Codex"] --> B["App (macOS)"]
+    A --> C["IDE Extension"]
+    A --> D["CLI"]
+    A --> E["Cloud / Web"]
+    C --> F["VS Code"]
+    C --> G["Cursor"]
+    C --> H["Windsurf"]
 ```
 
-### Usage
-*   `gh copilot suggest "find all javascript files updated in the last 2 days"`: Generates the shell command based on natural language.
-*   `gh copilot explain "chmod 755 script.sh"`: Explains what a specific shell command does.
+### App (macOS)
 
-## Copilot for Pull Requests
-If your organization has Copilot Enterprise, Copilot can assist with Code Review on GitHub.com.
+The native desktop app provides a graphical interface for local coding sessions with full access to Codex features.
 
-*   **PR Summaries:** Copilot can automatically generate a high-level summary of the changes in a PR description, making it easier for reviewers to understand the context.
-*   **Review Assistance:** It can highlight potential bugs or security flaws in the PR diff directly in the GitHub web UI.
+- [App Overview](https://developers.openai.com/codex/app)
+- [App Features](https://developers.openai.com/codex/app/features)
+- [App Settings](https://developers.openai.com/codex/app/settings)
+- [Automations](https://developers.openai.com/codex/app/automations)
+- [Worktrees](https://developers.openai.com/codex/app/worktrees)
+- [Local Environments](https://developers.openai.com/codex/app/local-environments)
+- [Troubleshooting](https://developers.openai.com/codex/app/troubleshooting)
 
-## Organizational Policy Management
-Administrators can configure Copilot behavior across the organization:
-*   **Public Code Match:** Admins can enable or disable Copilot's ability to suggest code that matches public code on GitHub.
-*   **Telemetry:** Control what telemetry data is sent back to GitHub.
-*   **Content Exclusion:** Define repository-wide rules (like `.copilotignore` or via the web UI) to ensure Copilot never reads or suggests code within sensitive directories. This is critical for maintaining compliance on proprietary algorithms or credential files.
+### IDE Extension
 
-## Integrating with Custom Models
-GitHub is increasingly allowing enterprise customers to fine-tune Copilot on their own proprietary codebases, ensuring the suggestions closely follow internal style guides and utilize internal monolithic libraries accurately.
+Install the Codex extension in your editor:
+
+- [VS Code](vscode:extension/openai.chatgpt)
+- [Cursor](cursor:extension/openai.chatgpt)
+- [Windsurf](windsurf:extension/openai.chatgpt)
+
+See: [IDE Overview](https://developers.openai.com/codex/ide) · [IDE Features](https://developers.openai.com/codex/ide/features) · [IDE Commands](https://developers.openai.com/codex/ide/commands)
+
+### Cloud / Web
+
+Run tasks in cloud-hosted environments without a local workspace:
+
+- [Cloud Overview](https://developers.openai.com/codex/cloud)
+- [Cloud Environments](https://developers.openai.com/codex/cloud/environments)
+- [Internet Access](https://developers.openai.com/codex/cloud/internet-access)
+
+## Third-Party Integrations
+
+| Integration | Description | Link |
+|---|---|---|
+| **GitHub** | Code hosting, PRs, automation | [Docs](https://developers.openai.com/codex/integrations/github) |
+| **Slack** | Team messaging integration | [Docs](https://developers.openai.com/codex/integrations/slack) |
+| **Linear** | Issue tracking integration | [Docs](https://developers.openai.com/codex/integrations/linear) |
+
+## Automation
+
+| Feature | Description | Link |
+|---|---|---|
+| Non-Interactive Mode | Scripted / CI runs | [Docs](https://developers.openai.com/codex/noninteractive) |
+| Codex SDK | Programmatic access | [Docs](https://developers.openai.com/codex/sdk) |
+| App Server | Local server for app | [Docs](https://developers.openai.com/codex/app-server) |
+| GitHub Action | CI/CD automation | [Docs](https://developers.openai.com/codex/github-action) |
