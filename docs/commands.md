@@ -34,11 +34,13 @@ Complete command-line options and flags for the Codex terminal client. See [CLI 
 | `codex "prompt"` | Start with an initial prompt |
 | `codex exec "prompt"` | Non-interactive execution |
 | `codex exec --json` | Non-interactive with JSON output |
+| `codex execpolicy` | Check execpolicy rule files |
 | `codex resume` | Resume a previous session |
 | `codex resume --last` | Resume the most recent session |
 | `codex features list` | List feature flags |
 | `codex features enable <flag>` | Enable a feature flag |
 | `codex features disable <flag>` | Disable a feature flag |
+| `codex fork` | Fork a session to a new ID |
 | `codex login` | Authenticate |
 | `codex logout` | Log out |
 | `codex mcp` | Manage MCP servers |
@@ -54,11 +56,32 @@ Complete command-line options and flags for the Codex terminal client. See [CLI 
 
 | Command | Description |
 |---|---|
+| `/agent` | Switch the active agent thread |
+| `/apps` | Browse apps (connectors) and insert them into your prompt |
+| `/compact` | Summarize the visible conversation to free tokens |
+| `/debug-config` | Print config layer and requirements diagnostics |
+| `/diff` | Show the Git diff |
+| `/exit` | Exit the CLI (same as /quit) |
+| `/experimental` | Toggle experimental features |
+| `/feedback` | Send logs to the Codex maintainers |
+| `/fork` | Fork the current conversation into a new thread |
+| `/init` | Generate an AGENTS.md scaffold |
+| `/logout` | Sign out of Codex |
+| `/mcp` | List configured Model Context Protocol (MCP) tools |
+| `/mention` | Attach a file to the conversation |
 | `/model` | Switch models or adjust reasoning |
+| `/new` | Start a new conversation inside the same CLI session |
+| `/permissions` | Set what Codex can do without asking first |
+| `/personality` | Choose a communication style for responses |
+| `/plan` | Switch to plan mode and optionally send a prompt |
+| `/ps` | Show experimental background terminals and their recent output |
+| `/quit` | Exit the CLI |
+| `/resume` | Resume a saved conversation from your session list |
 | `/review` | Open code review presets |
+| `/sandbox-add-read-dir` | Grant sandbox read access to an extra directory (Windows only) |
+| `/status` | Display session configuration and token usage |
+| `/statusline` | Configure TUI status-line fields interactively |
 | `/theme` | Preview and select a visual theme |
-| `/exit` | Close the interactive session |
-| `/status` | Show current session info |
 
 ## Configuration
 
