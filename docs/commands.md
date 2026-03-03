@@ -42,6 +42,7 @@ Complete command-line options and flags for the Codex terminal client. See [CLI 
 | `codex features disable <flag>` | Disable a feature flag |
 | `codex fork` | Fork a session to a new ID |
 | `codex login` | Authenticate |
+| `codex login status` | Print active authentication mode |
 | `codex logout` | Log out |
 | `codex mcp` | Manage MCP servers |
 | `codex mcp-server` | Run Codex as an MCP server |
@@ -52,36 +53,6 @@ Complete command-line options and flags for the Codex terminal client. See [CLI 
 | `codex apply` | Apply a patch file |
 | `codex fork` | Fork a session to a new ID |
 
-## Slash Commands (Interactive)
-
-| Command | Description |
-|---|---|
-| `/agent` | Switch the active agent thread |
-| `/apps` | Browse apps (connectors) and insert them into your prompt |
-| `/compact` | Summarize the visible conversation to free tokens |
-| `/debug-config` | Print config layer and requirements diagnostics |
-| `/diff` | Show the Git diff |
-| `/exit` | Exit the CLI (same as /quit) |
-| `/experimental` | Toggle experimental features |
-| `/feedback` | Send logs to the Codex maintainers |
-| `/fork` | Fork the current conversation into a new thread |
-| `/init` | Generate an AGENTS.md scaffold |
-| `/logout` | Sign out of Codex |
-| `/mcp` | List configured Model Context Protocol (MCP) tools |
-| `/mention` | Attach a file to the conversation |
-| `/model` | Switch models or adjust reasoning |
-| `/new` | Start a new conversation inside the same CLI session |
-| `/permissions` | Set what Codex can do without asking first |
-| `/personality` | Choose a communication style for responses |
-| `/plan` | Switch to plan mode and optionally send a prompt |
-| `/ps` | Show experimental background terminals and their recent output |
-| `/quit` | Exit the CLI |
-| `/resume` | Resume a saved conversation from your session list |
-| `/review` | Open code review presets |
-| `/sandbox-add-read-dir` | Grant sandbox read access to an extra directory (Windows only) |
-| `/status` | Display session configuration and token usage |
-| `/statusline` | Configure TUI status-line fields interactively |
-| `/theme` | Preview and select a visual theme |
 
 ## Configuration
 

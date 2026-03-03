@@ -130,6 +130,36 @@ Feature settings persist in `~/.codex/config.toml`.
 
 Use `/theme` to preview and select a visual theme, or add custom `.tmTheme` files under `$CODEX_HOME/themes`.
 
+## Slash Commands
+
+Slash commands give you quick access to specialized workflows like `/review`, `/fork`, or your own reusable prompts. Codex ships with a curated set of built-ins, and you can create custom ones for team-specific tasks or personal shortcuts.
+
+See the [Slash Commands Guide](https://developers.openai.com/codex/guides/slash-commands) to browse the catalog of built-ins, learn how to author custom commands, and understand where they live on disk.
+
+## Prompt Editor
+
+When you’re drafting a longer prompt, it can be easier to switch to a full editor and then send the result back to the composer.
+
+In the prompt input, press `Ctrl+G` to open the editor defined by the `VISUAL` environment variable (or `EDITOR` if `VISUAL` isn’t set).
+
+## Model Context Protocol (MCP)
+
+Connect Codex to more tools by configuring Model Context Protocol servers. Add STDIO or streaming HTTP servers in `~/.codex/config.toml`, or manage them with the `codex mcp` CLI commands—Codex launches them automatically when a session starts and exposes their tools next to the built-ins. You can even run Codex itself as an MCP server when you need it inside another agent.
+
+See [Model Context Protocol](https://developers.openai.com/codex/mcp) for example configurations, supported auth flows, and a more detailed guide.
+
+## Working with Codex cloud
+
+The `codex cloud` command lets you triage and launch [Codex cloud tasks](https://developers.openai.com/codex/cloud) without leaving the terminal. Run it with no arguments to open an interactive picker, browse active or finished tasks, and apply the changes to your local project.
+
+You can also start a task directly from the terminal:
+
+```bash
+codex cloud exec --env ENV_ID "Summarize open bugs"
+```
+
+Add `--attempts` (1–4) to request best-of-N runs when you want Codex cloud to generate more than one solution.
+
 ## See Also
 
 - [CLI Reference](./commands.md)

@@ -78,3 +78,4 @@ See the [Changelog](https://developers.openai.com/codex/changelog) for release n
 - [CLI Features](https://developers.openai.com/codex/cli/features) — Interactive mode, multi-agent, code review, web search
 - [Configuration](https://developers.openai.com/codex/config-basic) — Config file, rules, AGENTS.md, MCP, skills
 - [CLI Reference](./commands.md) — Complete command-line options and flags
+- [CLI Slash Commands](./slash-commands.md) — Built-in and custom slash commands
