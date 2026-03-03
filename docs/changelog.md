@@ -1,7 +1,21 @@
 # OpenAI Codex CLI Changelog
 
 > Curated changelog sourced from the [official Codex changelog](https://developers.openai.com/codex/changelog).
-> Last updated: 2026-02-28
+> Last updated: 2026-03-03
+
+## Codex CLI 0.107.0 (2026-03-02)
+
+### New Features
+- **Fork into sub-agents**: Easily branch work without leaving the current conversation. (#12499)
+- **Realtime voice improvements**: Pick microphone and speaker devices, persist choices, and better audio format for transcription. (#12849, #12850, #13030)
+- **Multimodal tool output**: Custom tools can now return images and other structured content. (#12948)
+- **Model availability metadata**: App server exposes richer metadata, with TUI tooltips for plan-gated models. (#12958, #12972, #13021)
+- **Configurable memories**: New `codex debug clear-memories` command to reset saved memory state. (#12997, #12999, #13002, #13085)
+
+### Bug Fixes
+- Reconnecting with `thread/resume` restores pending approval and input requests. (#12560)
+- `thread/start` no longer blocks unrelated app-server requests. (#13033)
+- TUI diff rendering respects theme colors and displays more cleanly in low-color environments. (#13016, #13037)
 
 ## Codex CLI 0.106.0 (2026-02-26)
 
