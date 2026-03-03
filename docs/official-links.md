@@ -1,7 +1,7 @@
 # Official OpenAI Codex Documentation Links
 
 > All links sourced from [`developers.openai.com`](https://developers.openai.com/codex/cli/).
-> Last updated: 2026-02-27
+> Last updated: 2026-03-03
 
 ## Getting Started
 - [Overview / CLI Landing](https://developers.openai.com/codex/cli)
@@ -34,6 +34,7 @@
 - [IDE Settings](https://developers.openai.com/codex/ide/settings)
 - [IDE Commands](https://developers.openai.com/codex/ide/commands)
 - [IDE Slash Commands](https://developers.openai.com/codex/ide/slash-commands)
+- [Slash Commands Guide](https://developers.openai.com/codex/guides/slash-commands)
 
 ## Using Codex — CLI
 - [CLI Overview](https://developers.openai.com/codex/cli)
@@ -80,6 +81,13 @@
 - [Videos](https://developers.openai.com/codex/videos)
 - [Building AI Teams](https://developers.openai.com/codex/guides/build-ai-native-engineering-team)
 - [Agents SDK Guide](https://developers.openai.com/codex/guides/agents-sdk)
+- [Blog: Building frontend UIs with Codex and Figma](https://developers.openai.com/blog/building-frontend-uis-with-codex-and-figma)
+- [Blog: Run long horizon tasks with Codex](https://developers.openai.com/blog/run-long-horizon-tasks-with-codex)
+- [Blog Topic: Codex](https://developers.openai.com/blog/topic/codex)
+- [Cookbook: Codex Long Horizon Tasks](https://developers.openai.com/cookbook/examples/codex/long_horizon_tasks)
+- [Cookbook: Codex Prompting Guide](https://developers.openai.com/cookbook/examples/gpt-5/codex_prompting_guide)
+- [Cookbook Topic: Codex](https://developers.openai.com/cookbook/topic/codex)
+- [Resources: Codex](https://developers.openai.com/resources/codex)
 
 ## Community & Releases
 - [Ambassadors](https://developers.openai.com/codex/ambassadors)

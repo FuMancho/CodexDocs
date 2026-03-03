@@ -43,6 +43,8 @@ The default model for coding tasks is `gpt-5.3-codex`. Switch models mid-session
 /model
 ```
 
+For extra fast tasks, ChatGPT Pro subscribers have access to the `GPT-5.3-Codex-Spark` model in research preview.
+
 Or from the command line:
 
 ```bash
@@ -84,10 +86,10 @@ codex --image img1.png,img2.jpg "Summarize these diagrams"
 
 Use `/review` in the CLI to open built-in review presets:
 
-- **Review against a branch** — Highlights risks before opening a PR.
-- **Review uncommitted changes** — Inspect staged and untracked files.
+- **Review against a base branch** — Highlights risks before opening a PR by finding the merge base against its upstream.
+- **Review uncommitted changes** — Inspect staged, not staged, or not tracked files.
 - **Review a commit** — Analyze a specific SHA.
-- **Custom review** — Supply your own instructions (e.g., "Focus on accessibility").
+- **Custom review instructions** — Supply your own instructions (e.g., "Focus on accessibility").
 
 ## Web Search
 
@@ -113,6 +115,8 @@ codex exec --json "Analyze this codebase" > report.json
 ```
 
 ## Feature Flags
+
+Codex includes a small set of feature flags like `unified_exec` and `shell_snapshot`.
 
 ```bash
 codex features list
