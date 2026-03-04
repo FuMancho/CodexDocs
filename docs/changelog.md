@@ -3,6 +3,41 @@
 > Curated changelog sourced from the [official Codex changelog](https://developers.openai.com/codex/changelog).
 > Last updated: 2026-03-03
 
+## Codex App 26.303 (2026-03-03)
+
+### New features
+- Added a Worktrees setting to turn automatic cleanup of Codex-managed worktrees on or off.
+- Added Handoff support for moving a thread between Local and Worktree.
+- Added an explicit English option in the language menu.
+
+### Performance improvements and bug fixes
+- Improved GitHub and pull request workflows.
+- Improved approval prompts and app connection sign-in flows.
+- Additional performance improvements and bug fixes.
+
+---
+
+## Codex App 26.228 (2026-02-28)
+
+### Performance improvements and bug fixes
+- Fixed a regression where conversation and task views could stop updating while Codex was streaming a response.
+- Additional performance improvements and bug fixes.
+
+---
+
+## Codex App 26.227 (2026-02-27)
+
+### New features
+- Added pull request status badges in task rows and PR buttons, including draft, open, merged, and closed states.
+- Added a Worktrees setting to choose how many Codex-managed worktrees to keep before older ones are cleaned up.
+
+### Performance improvements and bug fixes
+- Improved scrolling and navigation in long conversations and code review, including fixes for thread jumpiness, sidebar jitter, and diff scrolling.
+- Improved app startup reliability and keyboard zoom behavior.
+- Additional performance improvements and bug fixes.
+
+---
+
 ## Codex CLI 0.107.0 (2026-03-02)
 
 ### New Features
