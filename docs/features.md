@@ -93,7 +93,7 @@ Use `/review` in the CLI to open built-in review presets:
 
 ## Web Search
 
-Codex includes a built-in web search tool. Defaults to cached results for safety. Enable live results:
+Codex includes a built-in web search tool. For local tasks in the Codex CLI, Codex enables web search by default and serves results from a web search cache. The cache is an OpenAI-maintained index of web results, so cached mode returns pre-indexed results instead of fetching live pages. Defaults to cached results for safety. Enable live results:
 
 ```bash
 codex --search
