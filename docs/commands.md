@@ -44,6 +44,7 @@ Complete command-line options and flags for the Codex terminal client. See [CLI 
 | `codex login` | Authenticate |
 | `codex login status` | Print active authentication mode |
 | `codex logout` | Log out |
+| `codex debug clear-memories` | Reset saved memory state |
 | `codex mcp` | Manage MCP servers |
 | `codex mcp-server` | Run Codex as an MCP server |
 | `codex app-server` | Start the app server |

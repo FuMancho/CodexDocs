@@ -44,7 +44,7 @@ Memories are ranked by usage frequency. Inactive memories get deprioritized:
 
 When memory capacity is reached, Codex compares overlapping memories and merges them:
 
-```
+```text
 "Always use pytest" + "Run pytest with --cov flag"
 → Merged: "Always use pytest with --cov flag"
 ```
@@ -72,7 +72,7 @@ Plan implementation approach. Output ONLY:
 NEVER write implementation code.
 """
 
-[[agents.definitions]]  
+[[agents.definitions]]
 name = "implementer"
 model = "gpt-5.3-codex"
 instructions = "Implement code matching the architect's spec exactly."
@@ -119,7 +119,7 @@ Name sub-agents for easier tracking:
 
 Parent agent sees approval requests from child agents in the TUI:
 
-```
+```text
 ┌─ auth-builder ─────────────────────┐
 │ Needs approval: Run `npm test`     │
 │ [Approve] [Deny]                   │
@@ -253,7 +253,7 @@ After compaction, `/status` shows freed context. Use proactively before complex 
 
 ### Thread-Scoped Realtime Endpoints
 
-```
+```text
 POST /api/v2/threads/{id}/realtime    # Connect to thread events
 DELETE /api/v2/threads/{id}/subscribe # Unload without archiving
 ```
