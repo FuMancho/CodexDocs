@@ -1,7 +1,42 @@
 # OpenAI Codex CLI Changelog
 
 > Curated changelog sourced from the [official Codex changelog](https://developers.openai.com/codex/changelog).
-> Last updated: 2026-03-03
+> Last updated: 2026-03-05
+
+## Codex CLI 0.111.0 (2026-03-05)
+
+### New Features
+- Fast mode is now enabled by default, and the TUI header shows whether the session is running in Fast or Standard mode.
+- `js_repl` can now dynamically import local `.js` and `.mjs` files, making it easier to reuse workspace scripts from the REPL.
+- Codex now tells the model which plugins are enabled at session start, improving discovery of installed MCPs, apps, and skills.
+- App-server v2 now exposes MCP elicitation as a structured request/response flow instead of raw events, which simplifies client integrations.
+- Expanded image workflow support for clients, including client-side handling of image-generation events and model metadata for image-capable web search.
+
+### Bug Fixes
+- Resuming a thread now preserves its stored git context and keeps apps enabled, avoiding broken state after `codex resume`.
+
+## Codex CLI 0.110.0 (2026-03-05)
+
+### New Features
+- Added a plugin system that can load skills, MCP entries, and app connectors from config or a local marketplace, with an install endpoint for enabling plugins from the app server.
+- Expanded the TUI multi-agent flow with approval prompts, `/agent`-based enablement, clearer prompts, ordinal nicknames, and role-labeled handoff context.
+- Added a persisted `/fast` toggle in the TUI and app-server support for fast and flex service tiers.
+- Improved memories with workspace-scoped writes, renamed memory settings, and guardrails against saving stale or polluted facts.
+- Added a direct Windows installer script to published release artifacts.
+
+### Bug Fixes
+- Fixed `@` file mentions so parent-directory `.gitignore` rules no longer hide valid repository files.
+- Made sub-agents faster and more reliable by reusing shell state correctly and fixing `/status`, `Esc`, pending-message handling, and startup/profile race conditions.
+- Fixed project trust parsing so CLI overrides apply correctly to trusted project-local MCP transports.
+- Fixed read-only sandbox policies so network access is preserved when it is explicitly enabled.
+- Fixed multiline environment export capture and Windows state DB path handling in session state.
+- Fixed ANSI/base16 syntax highlighting so terminal-themed colors render correctly in the TUI.
+
+## Codex App 26.304 (2026-03-04)
+
+### New Features
+- The Codex app is now available on Windows. The app gives you one interface for working across projects, running parallel agent threads, and reviewing results in one place.
+- The Windows app includes the same core features as the rest of the Codex app: Skills, Automations, and Worktrees.
 
 ## Codex App 26.303 (2026-03-03)
 

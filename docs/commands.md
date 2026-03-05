@@ -41,6 +41,7 @@ Complete command-line options and flags for the Codex terminal client. See [CLI 
 | `codex features enable <flag>` | Enable a feature flag |
 | `codex features disable <flag>` | Disable a feature flag |
 | `codex fork` | Fork a session to a new ID |
+| `codex fork --last` | Fork the most recent conversation automatically |
 | `codex login` | Authenticate |
 | `codex login status` | Print active authentication mode |
 | `codex logout` | Log out |
@@ -52,7 +53,6 @@ Complete command-line options and flags for the Codex terminal client. See [CLI 
 | `codex completion` | Shell completion setup |
 | `codex cloud` | Launch Codex Cloud tasks |
 | `codex apply` | Apply a patch file |
-| `codex fork` | Fork a session to a new ID |
 
 
 ## Configuration

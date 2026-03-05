@@ -37,21 +37,15 @@ codex exec resume --last "Fix the race conditions you found"
 
 ## Models & Reasoning
 
-The default model for coding tasks is `gpt-5.3-codex`. Switch models mid-session:
+For most tasks in Codex, `gpt-5.4` is the recommended model. It brings the industry-leading coding capabilities of `gpt-5.3-codex` to OpenAI’s flagship frontier model, combining frontier coding performance with stronger reasoning, native computer use, and broader professional workflows. For extra fast tasks, ChatGPT Pro subscribers have access to the `GPT-5.3-Codex-Spark` model in research preview.
 
-```text
-/model
-```
-
-For extra fast tasks, ChatGPT Pro subscribers have access to the `GPT-5.3-Codex-Spark` model in research preview.
-
-Or from the command line:
+Switch models mid-session with the `/model` command, or specify one when launching the CLI:
 
 ```bash
-codex --model gpt-5.3-codex
+codex --model gpt-5.4
 ```
 
-See [Models](https://developers.openai.com/codex/models) for details.
+Learn more about the [models available in Codex](https://developers.openai.com/codex/models).
 
 ## Approval Modes
 
@@ -93,7 +87,7 @@ Use `/review` in the CLI to open built-in review presets:
 
 ## Web Search
 
-Codex includes a built-in web search tool. For local tasks in the Codex CLI, Codex enables web search by default and serves results from a web search cache. The cache is an OpenAI-maintained index of web results, so cached mode returns pre-indexed results instead of fetching live pages. Defaults to cached results for safety. Enable live results:
+Codex ships with a first-party web search tool. For local tasks in the Codex CLI, Codex enables web search by default and serves results from a web search cache. The cache is an OpenAI-maintained index of web results, so cached mode returns pre-indexed results instead of fetching live pages. This reduces exposure to prompt injection from arbitrary live content, but you should still treat web results as untrusted. If you are using `--yolo` or another full access sandbox setting, web search defaults to live results. To fetch the most recent data, pass `--search` for a single run or set `web_search = "live"` in config. You can also set `web_search = "disabled"` to turn the tool off.
 
 ```bash
 codex --search

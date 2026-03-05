@@ -17,7 +17,7 @@ npm i -g @openai/codex
 ```
 
 > [!IMPORTANT]
-> Codex CLI is available on macOS and Linux. Windows support is experimental — for the best experience, use Codex in a WSL workspace. See the [Windows setup guide](https://developers.openai.com/codex/windows).
+> Codex CLI is available on macOS and Linux. Windows support is experimental. For the best Windows experience, use Codex in a WSL workspace and follow our [Windows setup guide](https://developers.openai.com/codex/windows).
 
 ## Authentication
 
