@@ -43,7 +43,7 @@ The following workflows keep your session on track without restarting Codex.
 
 1. Start Codex and open the composer.
 2. Type `/model` and press Enter.
-3. Choose a model such as `gpt-4.1-mini` or `gpt-4.1` from the popup.
+3. Choose a model such as `gpt-5.4` or `gpt-5.3-codex` from the popup.
 
 **Expected:** Codex confirms the new model in the transcript. Run `/status` to verify the change.
 
@@ -96,6 +96,7 @@ Codex supports `friendly`, `pragmatic`, and `none` personalities. Use `none` to 
 This command is available only when running the CLI natively on Windows.
 
 1. Type `/sandbox-add-read-dir C:\absolute\directory\path` and press Enter.
+2. Confirm the path is an existing absolute directory.
 
 **Expected:** Codex refreshes the Windows sandbox policy and grants read access to that directory for later commands that run in the sandbox.
 
@@ -119,6 +120,8 @@ This command is available only when running the CLI natively on Windows.
 2. Use the picker to toggle and reorder items, then confirm.
 
 **Expected:** The footer status line updates immediately and persists to `tui.status_line` in `config.toml`.
+
+Available status-line items include model, model+reasoning, context stats, rate limits, git branch, token counters, session id, current directory/project root, and Codex version.
 
 ### Check background terminals with `/ps`
 

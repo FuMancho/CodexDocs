@@ -37,7 +37,7 @@ codex exec resume --last "Fix the race conditions you found"
 
 ## Models & Reasoning
 
-The default model for coding tasks is `gpt-5.3-codex`. Switch models mid-session:
+For most tasks in Codex, `gpt-5.4` is the recommended model. It brings the industry-leading coding capabilities of `gpt-5.3-codex` to OpenAI’s flagship frontier model, combining frontier coding performance with stronger reasoning, native computer use, and broader professional workflows. Switch models mid-session:
 
 ```text
 /model
@@ -48,7 +48,7 @@ For extra fast tasks, ChatGPT Pro subscribers have access to the `GPT-5.3-Codex-
 Or from the command line:
 
 ```bash
-codex --model gpt-5.3-codex
+codex --model gpt-5.4
 ```
 
 See [Models](https://developers.openai.com/codex/models) for details.
