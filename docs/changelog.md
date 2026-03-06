@@ -1,7 +1,47 @@
 # OpenAI Codex CLI Changelog
 
 > Curated changelog sourced from the [official Codex changelog](https://developers.openai.com/codex/changelog).
-> Last updated: 2026-03-03
+> Last updated: 2026-03-05
+
+## Introducing GPT-5.4 in Codex (2026-03-05)
+
+GPT-5.4 is now available in Codex as OpenAI’s most capable and efficient
+frontier model for professional work.
+It combines recent advances in reasoning, coding, and agentic workflows in one
+model, and it’s the recommended choice for most Codex tasks.
+
+## Codex CLI 0.111.0 (2026-03-05)
+
+### New Features
+- Fast mode is now enabled by default, and the TUI header shows whether the session is running in Fast or Standard mode. (#13450, #13446)
+- js_repl can now dynamically import local .js and .mjs files, making it easier to reuse workspace scripts from the REPL. (#13437)
+- Codex now tells the model which plugins are enabled at session start, improving discovery of installed MCPs, apps, and skills. (#13433)
+- App-server v2 now exposes MCP elicitation as a structured request/response flow instead of raw events, which simplifies client integrations. (#13425)
+- Expanded image workflow support for clients, including client-side handling of image-generation events and model metadata for image-capable web search. (#13512)
+
+---
+
+## Codex CLI 0.110.0 (2026-03-05)
+
+### New Features
+- Added a plugin system that can load skills, MCP entries, and app connectors from config or a local marketplace, with an install endpoint for enabling plugins from the app server. (#12864, #13333, #13401, #13422)
+- Expanded the TUI multi-agent flow with approval prompts, /agent-based enablement, clearer prompts, ordinal nicknames, and role-labeled handoff context. (#12995, #13246, #13404, #13412, #13505)
+
+---
+
+## Codex CLI artifact-runtime-v2.4.0 (2026-03-05)
+
+- Empty draft
+- Full release on Github
+
+---
+
+## Codex App 26.304 (2026-03-04)
+
+### Codex app for Windows
+The Codex app is now available on Windows. The app gives you one interface for working across projects, running parallel agent threads, and reviewing results in one place. The Windows app includes the same core features as the rest of the Codex app.
+
+---
 
 ## Codex App 26.303 (2026-03-03)
 

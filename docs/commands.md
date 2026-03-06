@@ -51,7 +51,7 @@ Complete command-line options and flags for the Codex terminal client. See [CLI 
 | `codex sandbox` | Manage sandbox settings |
 | `codex completion` | Shell completion setup |
 | `codex cloud` | Launch Codex Cloud tasks |
-| `codex apply` | Apply a patch file |
+| `codex apply` | Apply the most recent diff from a Codex cloud task |
 | `codex fork` | Fork a session to a new ID |
 
 
