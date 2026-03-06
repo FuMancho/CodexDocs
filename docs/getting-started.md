@@ -3,7 +3,7 @@
 Codex is OpenAI's coding agent available as a native app, IDE extension, CLI, and cloud platform. It reads, edits, and runs code in your project directory. Codex is included with ChatGPT Plus, Pro, Business, Edu, and Enterprise plans.
 
 > [!NOTE]
-> Codex CLI is [open source](https://github.com/openai/codex) and built in Rust for speed and efficiency.
+> Codex CLI is open source and built in Rust for speed and efficiency.
 
 ## Prerequisites
 

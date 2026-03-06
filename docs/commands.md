@@ -11,6 +11,7 @@ Complete command-line options and flags for the Codex terminal client. See [CLI 
 | `--cd`, `-C` | `path` | Set the working directory |
 | `--config`, `-c` | `key=value` | Override configuration values |
 | `--yolo` | — | Skip all approvals and sandboxing |
+| `--ephemeral` | `boolean` | Run without persisting session rollout files to disk |
 | `--disable` | `feature` | Force-disable a feature flag |
 | `--enable` | `feature` | Force-enable a feature flag |
 | `--full-auto` | — | Shortcut for `on-request` approval + `workspace-write` sandbox |
@@ -18,9 +19,11 @@ Complete command-line options and flags for the Codex terminal client. See [CLI 
 | `--model`, `-m` | `string` | Override the configured model |
 | `--no-alt-screen` | — | Disable alternate screen mode for the TUI |
 | `--oss` | — | Use local open source model provider (Ollama) |
+| `--output-schema` | `path` | JSON Schema file describing the expected final response shape |
 | `--profile`, `-p` | `string` | Load a config profile from `config.toml` |
 | `--sandbox`, `-s` | `read-only`, `workspace-write`, `danger-full-access` | Sandbox policy for shell commands |
 | `--search` | — | Enable live web search |
+| `--skip-git-repo-check` | `boolean` | Allow running outside a Git repository |
 | `PROMPT` | `string` | Optional initial prompt text |
 
 > [!WARNING]
