@@ -63,7 +63,7 @@ coordination = "hierarchical"
 
 [[agents.definitions]]
 name = "architect"
-model = "gpt-5.3-codex"
+model = "gpt-5.4"
 instructions = """
 Plan implementation approach. Output ONLY:
 1. Component breakdown
@@ -74,17 +74,17 @@ NEVER write implementation code.
 
 [[agents.definitions]]
 name = "implementer"
-model = "gpt-5.3-codex"
+model = "gpt-5.4"
 instructions = "Implement code matching the architect's spec exactly."
 
 [[agents.definitions]]
 name = "tester"
-model = "gpt-5.3-codex"
+model = "gpt-5.4"
 instructions = "Write comprehensive tests. Never modify source code."
 
 [[agents.definitions]]
 name = "reviewer"
-model = "gpt-5.3-codex"
+model = "gpt-5.4"
 instructions = "Security and quality review. Output severity-rated findings only."
 ```
 
@@ -99,9 +99,9 @@ spawn_agents_on_csv tasks.csv
 
 ```csv
 task,instructions,model
-auth-module,"Build JWT auth with refresh tokens",gpt-5.3-codex
-user-crud,"Implement user CRUD with validation",gpt-5.3-codex
-api-tests,"Write integration tests for all endpoints",gpt-5.3-codex
+auth-module,"Build JWT auth with refresh tokens",gpt-5.4
+user-crud,"Implement user CRUD with validation",gpt-5.4
+api-tests,"Write integration tests for all endpoints",gpt-5.4
 ```
 
 Progress UI shows real-time status of all spawned agents.

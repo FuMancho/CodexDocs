@@ -27,7 +27,7 @@ flowchart TD
 
 ```toml
 [profiles.safe]
-model = "gpt-5.3-codex"
+model = "gpt-5.4"
 approval_policy = "on-request"
 sandbox = "read-only"
 web_search = "disabled"
@@ -40,7 +40,7 @@ web_search_request = false
 
 ```toml
 [profiles.balanced]
-model = "gpt-5.3-codex"
+model = "gpt-5.4"
 approval_policy = "on-request"
 sandbox = "workspace-write"
 web_search = "live"
@@ -57,7 +57,7 @@ alternate_screen = true
 
 ```toml
 [profiles.auto]
-model = "gpt-5.3-codex"
+model = "gpt-5.4"
 approval_policy = "never"
 sandbox = "workspace-write"
 
@@ -239,12 +239,12 @@ coordination = "hierarchical"
 ```toml
 [[agents.definitions]]
 name = "test-writer"
-model = "gpt-5.3-codex"
+model = "gpt-5.4"
 instructions = "You only write tests. Never modify source code."
 
 [[agents.definitions]]
 name = "security-reviewer"
-model = "gpt-5.3-codex"
+model = "gpt-5.4"
 instructions = "Review all changes for OWASP Top 10 vulnerabilities."
 ```
 

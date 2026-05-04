@@ -1,7 +1,121 @@
 # OpenAI Codex CLI Changelog
 
 > Curated changelog sourced from the [official Codex changelog](https://developers.openai.com/codex/changelog).
-> Last updated: 2026-03-05
+> Last updated: 2026-04-30
+
+## Codex CLI 0.128.0 (2026-04-30)
+
+### New Features
+- Added persisted /goal workflows with app-server APIs, model tools, runtime continuation, and TUI controls for create, pause, resume, and clear. (#18073)
+- Added codex update, configurable TUI keymaps, plan-mode nudges, action-required terminal titles, and active-turn /statusline and /title edits. (#19933)
+- Expanded permission profiles with built-in defaults, sandbox CLI profile selection, cwd controls, and active-profile metadata for clients. (#19900)
+- Improved plugin workflows with marketplace installation, remote bundle caching, remote uninstall, plugin-bundled hooks, hook enablement state, and external-agent config import. (#18704)
+- Added external agent session import, including background imports and imported-session title handling. (#19895)
+- Made MultiAgentV2 configuration more explicit with thread caps, wait-time controls, root/subagent hints, and v2-specific depth handling. (#19360)
+
+### Bug Fixes
+- Fixed several resume and interruption issues, including stale interrupt hangs, persisted provider restoration, large remote resume responses, and slow filtered resume lists. (#18392)
+- Improved TUI reliability around terminal resize reflow, markdown list spacing, slash-command popup layout, keyboard cleanup, shell-mode escape, and working status updates. (#18575)
+
+---
+
+## Codex CLI 0.125.0 (2026-04-24)
+
+### New Features
+- App-server integrations now support Unix socket transport, pagination-friendly resume/fork, sticky environments, and remote thread config/store plumbing. (#18255)
+- App-server plugin management can install remote plugins and upgrade configured marketplaces. (#18917)
+- Permission profiles now round-trip across TUI sessions, user turns, MCP sandbox state, shell escalation, and app-server APIs. (#18284)
+
+---
+
+## Codex CLI 0.124.0 (2026-04-23)
+
+### New Features
+- The TUI now has quick reasoning controls: Alt+, lowers reasoning, Alt+. raises it, and accepted model upgrades now reset reasoning to the new model’s default instead of carrying over stale settings. (#18866)
+- App-server sessions can now manage multiple environments and choose an environment and working directory per turn, which makes multi-workspace and remote setups easier to target precisely. (#18401)
+- Added first-class Amazon Bedrock support for OpenAI-compatible providers, including AWS SigV4 signing and AWS credential-based auth. (#17820)
+- Remote plugin marketplaces can now be listed and read directly, with more reliable detail lookups and larger result pages. (#18452)
+- Hooks are now stable, can be configured inline in config.toml and managed requirements.toml, and can observe MCP tools as well as apply_patch and long-running Bash sessions. (#18893)
+
+---
+
+## Codex CLI 0.123.0 (2026-04-23)
+
+### New Features
+- Added a built-in amazon-bedrock model provider with configurable AWS profile support.
+- Added /mcp verbose for full MCP server diagnostics, resources, and resource templates while keeping plain /mcp fast.
+- Made plugin MCP loading accept both mcpServers and top-level server maps in .mcp.json.
+
+---
+
+## Codex CLI 0.122.0 (2026-04-20)
+
+### New Features
+- Standalone installs are more self-contained, and codex app now opens or installs Desktop correctly on Windows and Intel Macs.
+- The TUI can open /side conversations for quick side questions, and queued input now supports slash commands and ! shell prompts while work is running.
+- Plan Mode can start implementation in a fresh context, with context-usage shown before deciding whether to carry the planning thread forward.
+- Plugin workflows now include tabbed browsing, inline enable/disable toggles, marketplace removal, and remote, cross-repo, or local marketplace sources.
+- Filesystem permissions now support deny-read glob policies, managed deny-read requirements, platform sandbox enforcement, and isolated codex exec runs that ignore user config or rules.
+- Tool discovery and image generation are now enabled by default, with higher-detail image handling and original-detail metadata support for MCP and js_repl image outputs.
+
+---
+
+## Codex CLI 0.121.0 (2026-04-15)
+
+### New Features
+- Added codex marketplace add and app-server support for installing plugin marketplaces from GitHub, git URLs, local directories, and direct marketplace.json URLs.
+- Added TUI prompt history improvements, including Ctrl+R reverse search and local recall for accepted slash commands.
+- Added TUI and app-server controls for memory mode, memory reset/deletion, and memory-extension cleanup.
+- Expanded MCP/plugin support with MCP Apps tool calls, namespaced MCP registration, parallel-call opt-in, and sandbox-state metadata for MCP servers.
+- Added realtime and app-server APIs for output modality, transcript completion events, raw turn item injection, and symlink-aware filesystem metadata.
+- Added a secure devcontainer profile with bubblewrap support, plus macOS sandbox allowlists for Unix sockets.
+
+---
+
+## Codex CLI 0.120.0 (2026-04-11)
+
+### New Features
+- Realtime V2 can now stream background agent progress while work is still running and queue follow-up responses until the active response completes
+- Hook activity in the TUI is easier to scan, with live running hooks shown separately and completed hook output kept only when useful
+- Custom TUI status lines can include the renamed thread title
+- Code-mode tool declarations now include MCP outputSchema details so structured tool results are typed more precisely
+- SessionStart hooks can distinguish sessions created by /clear from fresh startup or resume sessions
+
+---
+
+## Codex CLI 0.119.0 (2026-04-10)
+
+### New Features
+- Realtime voice sessions now default to the v2 WebRTC path, with configurable transport, voice selection, native TUI media support, and app-server coverage for the new flow.
+- MCP Apps and custom MCP servers gained richer support, including resource reads, tool-call metadata, custom-server tool search, server-driven elicitations, file-parameter uploads, and more reliable plugin cache refreshes.
+- Remote/app-server workflows now support egress websocket transport, remote --cd forwarding, runtime remote-control enablement, sandbox-aware filesystem APIs, and an experimental codex exec-server subcommand.
+- The TUI can copy the latest agent response with Ctrl+O, including better clipboard behavior over SSH and across platforms.
+- /resume can now jump directly to a session by ID or name from the TUI.
+- TUI notifications are more configurable, including Warp OSC 9 support and an opt-in mode for notifications even while the terminal is focused.
+
+---
+
+## Codex CLI 0.118.0 (2026-03-31)
+
+### New Features
+- Windows sandbox runs can now enforce proxy-only networking with OS-level egress rules, instead of relying on environment variables alone.
+- App-server clients can now start ChatGPT sign-in with a device code flow, which helps when browser callback login is unreliable or unavailable.
+- codex exec now supports the prompt-plus-stdin workflow, so you can pipe input and still pass a separate prompt on the command line.
+- Custom model providers can now fetch and refresh short-lived bearer tokens dynamically, instead of being limited to static credentials from config or environment variables.
+
+---
+
+## Codex CLI 0.117.0 (2026-03-26)
+
+### New Features
+- Plugins are now a first-class workflow: Codex can sync product-scoped plugins at startup, browse them in /plugins, and install or remove them with clearer auth/setup handling.
+- Sub-agents now use readable path-based addresses like /root/agent_a, with structured inter-agent messaging and agent listing for multi-agent v2 workflows.
+- The /title terminal-title picker now works in both the classic TUI and the app-server TUI, making parallel sessions easier to tell apart.
+- App-server clients can now send ! shell commands, watch filesystem changes, and connect to remote websocket servers with bearer-token auth.
+- Image workflows got smoother: view_image now returns image URLs for code mode, generated images are reopenable from the TUI, and image-generation history survives resume.
+- Prompt history recall now works in the app-server TUI, including across sessions.
+
+---
 
 ## Introducing GPT-5.4 in Codex (2026-03-05)
 

@@ -9,7 +9,7 @@ Settings are read from `~/.codex/config.toml`. Use `--profile` to load named pro
 ```toml
 # ~/.codex/config.toml
 
-model = "gpt-5.3-codex"
+model = "gpt-5.4"
 web_search = "cached"
 
 [sandbox]

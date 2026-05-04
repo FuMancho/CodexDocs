@@ -43,7 +43,7 @@ The following workflows keep your session on track without restarting Codex.
 
 1. Start Codex and open the composer.
 2. Type `/model` and press Enter.
-3. Choose a model such as `gpt-5.4` or `gpt-5.3-codex` from the popup.
+3. Choose a model such as `gpt-5.5` or `gpt-5.4` from the popup.
 
 **Expected:** Codex confirms the new model in the transcript. Run `/status` to verify the change.
 
