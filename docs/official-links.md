@@ -1,7 +1,7 @@
 # Official OpenAI Codex Documentation Links
 
 > All links sourced from [`developers.openai.com`](https://developers.openai.com/codex/cli/).
-> Last updated: 2026-03-03
+> Last updated: 2026-05-14
 
 ## Getting Started
 - [Overview / CLI Landing](https://developers.openai.com/codex/cli)
@@ -25,6 +25,9 @@
 - [Automations](https://developers.openai.com/codex/app/automations)
 - [Worktrees](https://developers.openai.com/codex/app/worktrees)
 - [Local Environments](https://developers.openai.com/codex/app/local-environments)
+- [In-App Browser](https://developers.openai.com/codex/app/browser)
+- [Chrome Extension](https://developers.openai.com/codex/app/chrome-extension)
+- [Computer Use](https://developers.openai.com/codex/app/computer-use)
 - [App Commands](https://developers.openai.com/codex/app/commands)
 - [Troubleshooting](https://developers.openai.com/codex/app/troubleshooting)
 
@@ -101,4 +104,3 @@
 - [GitHub Releases Atom Feed](https://github.com/openai/codex/releases.atom)
 - [npm — @openai/codex](https://www.npmjs.com/package/@openai/codex)
 - [Codex CLI Changelog (detailed)](https://developers.openai.com/codex/changelog)
-
