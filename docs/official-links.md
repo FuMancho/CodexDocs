@@ -102,3 +102,11 @@
 - [npm — @openai/codex](https://www.npmjs.com/package/@openai/codex)
 - [Codex CLI Changelog (detailed)](https://developers.openai.com/codex/changelog)
 
+
+
+## Newly Discovered Links
+
+- [https://developers.openai.com/codex/agent-approvals-security](https://developers.openai.com/codex/agent-approvals-security)
+- [https://developers.openai.com/codex/learn/best-practices](https://developers.openai.com/codex/learn/best-practices)
+- [https://developers.openai.com/codex/remote-connections](https://developers.openai.com/codex/remote-connections)
+- [https://developers.openai.com/codex/subagents](https://developers.openai.com/codex/subagents)
