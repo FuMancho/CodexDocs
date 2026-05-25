@@ -53,6 +53,11 @@ codex --model gpt-5.4
 
 See [Models](https://developers.openai.com/codex/models) for details.
 
+
+## Goal Mode
+
+Goal mode allows Codex to drive toward a specific objective for hours or even days. This is available in the Codex app, IDE extension, and CLI. Goals track progress across active turns and are backed by dedicated storage.
+
 ## Approval Modes
 
 Control when Codex pauses for human approval:
@@ -159,6 +164,11 @@ codex cloud exec --env ENV_ID "Summarize open bugs"
 ```
 
 Add `--attempts` (1–4) to request best-of-N runs when you want Codex cloud to generate more than one solution.
+
+
+## Appshots
+
+Appshots allow you to send the frontmost app window to Codex with a screenshot and available text. This enables Codex to work from context in another app without you copying, pasting, or describing it manually. (Available in the Codex app on macOS by pressing both Command keys).
 
 ## See Also
 

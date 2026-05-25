@@ -1,7 +1,52 @@
 # OpenAI Codex CLI Changelog
 
 > Curated changelog sourced from the [official Codex changelog](https://developers.openai.com/codex/changelog).
-> Last updated: 2026-05-14
+> Last updated: 2026-05-21
+
+
+## Appshots, goal mode, and more 26.519 (2026-05-21)
+
+Appshots are now available in the Codex app on macOS. Press both Command keys to send the frontmost app window to Codex with a screenshot and available text, so Codex can work from context in another app without you copying, pasting, or describing it manually.
+
+This launch also includes:
+- Goal mode is no longer an experimental feature and is available in the Codex app, IDE extension, and CLI. With Goal mode, you can have Codex drive toward a specific objective for hours or even days.
+- Remote computer use, so Codex can use desktop apps after your Mac locks, including remotely via Codex Mobile. Codex scopes locked use to active, trusted computer use turns and includes safeguards such as short-lived authorization, covered displays, relock on local input, and manual-unlock fallback.
+- Plugin sharing through marketplace sources is available for ChatGPT Business. Enterprise support will be available in a future update. Teams can distribute reusable plugin bundles that include skills, app integrations, MCP servers, and lifecycle hooks.
+- Advanced in-app browser annotations let you tweak styling such as font size, colors, and spacing directly using annotations. This gives Codex a clearer signal for changes.
+- Browser-use improvements across in-app browser & Chrome:
+  - Codex can now download and extract all image assets from a page much more quickly.
+  - Codex can now extract structured data from pages more effectively and find information more quickly with a read-only JS sandbox.
+- Chrome extension will create less clutter when using it. Codex will no longer create tab groups when taking over existing tabs, and at the end of a task for handoff. Instead, it uses tab icons to indicate status.
+- Significantly improved reliability for browser use. We fixed bugs on Windows, flaky availability of the plugin to non geo-blocked regions, and many other issues impacting performance.
+
+## Codex CLI 0.133.0 (2026-05-21)
+
+### New Features
+- Goals are now enabled by default, backed by dedicated storage, and track progress across active turns.
+- `codex remote-control` now runs like a foreground command, waits for readiness, reports machine status, and keeps explicit daemon-style start/stop commands.
+- Permission profiles gained list APIs, inheritance, managed `requirements.toml` support, runtime refresh behavior, and stronger Windows sandbox integration.
+- Plugin discovery is easier to inspect, with marketplace-aware list output, installed versions, visible marketplace roots, and remote collection support.
+- Extensions can observe more lifecycle events, including subagent start/stop, tool execution, turn metadata, and async approval/turn processing.
+
+## Codex CLI 0.132.0 (2026-05-20)
+
+### New Features
+- The Python SDK now supports first-class authentication, including API key login, ChatGPT browser and device-code flows, account inspection, and logout APIs.
+- Python turn APIs are easier to use for text-only workflows: you can pass a plain string as input, and handle-based runs now return a richer TurnResult with collected items, timing, and usage data.
+- `codex exec resume` now accepts `--output-schema`, so resumed automations can keep session context while still enforcing structured JSON output.
+- TUI startup is faster because terminal capability probes are now batched instead of waiting on several serial checks before the first interactive frame.
+- Remote executor registration can now use standard Codex auth instead of a separate registry credential flow.
+- App-server turns can preserve requested image fidelity, including original-resolution local images, across user inputs and image-producing tools.
+
+## Codex CLI 0.131.0 (2026-05-18)
+
+### New Features
+- The TUI now offers richer session controls and display: data-driven service-tier commands, blended token usage, permissions/approval mode, effective workspace roots, and responsive Markdown tables.
+- `@` mentions now search files, directories, plugins, and skills in one picker, backed by app-server plugin metadata.
+- Plugin workflows gained marketplace CLI commands, version-aware sharing, share checkout, clearer shared-workspace buckets, and default-enabled plugin hooks.
+- Remote workflows now support daemon-managed `codex remote-control`, runtime enable/disable APIs, status reads, and registry-backed/configured remote environments.
+- The Python SDK moved to `openai-codex` / `openai_codex`, with pinned runtime-generated types, concurrent turn routing, approval modes, and integration coverage.
+- Added `codex doctor` for support-ready diagnostics across runtime, auth, terminal, network, config, and local state.
 
 ## Work with Codex from anywhere (2026-05-14)
 
