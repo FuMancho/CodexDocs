@@ -11,19 +11,17 @@ ChatGPT Plus, Pro, Business, Edu, and Enterprise plans include Codex. Learn more
 
 ## CLI setup
 
-Choose your package manager
+Choose your install option
 
-npmHomebrew
+macOS/LinuxWindowsnpmHomebrew
 
    ### Install
 
-   Install the Codex CLI with npm.
+   Install the Codex CLI with the standalone installer for macOS and Linux.
 
-   npm install command
+   macOS/Linux install command
 
-   ```bash
-npm i -g @openai/codex
-```
+   curl -fsSL https://chatgpt.com/codex/install.sh | shCopy
    ### Run
 
    Run Codex in a terminal. It can inspect your repository, edit files, and run commands.
@@ -39,13 +37,11 @@ codex
    See the [pricing page](/codex/pricing "/codex/pricing") if you're not sure which plans include Codex access.
    ### Upgrade
 
-   New versions of the Codex CLI are released regularly. See the [changelog](/codex/changelog "/codex/changelog") for release notes. To upgrade with npm, run:
+   New versions of the Codex CLI are released regularly. See the [changelog](/codex/changelog "/codex/changelog") for release notes. To upgrade a standalone install, rerun the installer:
 
-   npm upgrade command
+   macOS/Linux upgrade command
 
-   ```bash
-npm i -g @openai/codex@latest
-```
+   curl -fsSL https://chatgpt.com/codex/install.sh | shCopy
 
 The Codex CLI is available on macOS, Windows, and Linux. On Windows, run Codex
 natively in PowerShell with the Windows sandbox, or use WSL2 when you need a
