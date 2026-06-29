@@ -1,7 +1,289 @@
 # OpenAI Codex CLI Changelog
 
 > Curated changelog sourced from the [official Codex changelog](https://developers.openai.com/codex/changelog).
-> Last updated: 2026-05-21
+> Last updated: 2026-06-25
+
+## June 2026
+
+* 2026-06-25
+
+  ### Codex Remote reaches general availability
+
+  Codex Remote has reached general availability. Use Codex from the ChatGPT mobile
+  app to start or continue work on a connected Mac or Windows host, review
+  progress, and approve actions from your phone.
+
+  Remote Control now uses authenticated one-to-one QR pairing between each iOS or
+  Android device and each host. Update the ChatGPT mobile app and Codex App to the
+  latest versions before connecting. Connections used since June 8, 2026, remain
+  paired; older inactive connections need to pair again.
+
+  The new [DigitalOcean plugin](https://chatgpt.com/plugins/share/5dc672c7116c44ff92595d48e72df522)
+  lets Codex provision a DigitalOcean Droplet, configure SSH access, and connect
+  it to the Codex App as a remote workspace.
+
+  See [Remote connections](/codex/remote-connections) for setup and
+  troubleshooting.
+* 2026-06-22
+
+  ### ChatGPT for iOS 1.2026.167
+
+  ### New features
+
+  + Added per-host personality settings with Friendly and Pragmatic options.
+  + Added support for editing goals directly in the composer.
+  + Added a link from forked conversations back to the original thread.
+
+  ### Improvements and bug fixes
+
+  + Improved side chat visibility with separate conversations above the composer.
+  + Improved composer autocomplete for commands, skills, and plugins from any
+    prefix.
+  + Improved progress visibility for subagents, tasks, and worktree creation.
+  + Fixed long threads loading.
+  + Improved workspace file search, code review drafts, steering, and host setup
+    and recovery.
+  + Fixed Face ID unlocking, stopping responses, collapsed sections, and dark-mode
+    host indicators.
+* 2026-06-18
+
+  ### Codex app 26.616
+
+  ### New features
+
+  + Added [Record & Replay](/codex/record-and-replay), a macOS feature that turns
+    a demonstrated workflow into a reusable skill. Initial availability excludes
+    the European Economic Area, the United Kingdom, and Switzerland. You or your
+    administrator must also enable Computer Use.
+  + Added bulk actions to [automation](/codex/app/automations) run history so you
+    can mark every run as read or archive eligible runs.
+  + Added [thread handoff between local and remote hosts](/codex/remote-connections#hand-off-a-thread-between-hosts),
+    so you can move a thread to a matching project on a connected host and
+    continue it there. Codex can also coordinate the handoff for you.
+
+  ### Performance improvements and bug fixes
+
+  + Added new [deep links](/codex/app/commands#settings) to manage SSH connections.
+  + Improved Browser Use so visible-tab routing and annotations persist when a
+    draft browser session moves to the server.
+  + Additional performance improvements and bug fixes.
+* 2026-06-16
+
+  ### Codex app features are available in the EEA, UK, and Switzerland
+
+  More Codex app capabilities are rolling out to users in the European Economic
+  Area, the United Kingdom, and Switzerland:
+
+  + [Computer Use](/codex/app/computer-use) is available on macOS and Windows in
+    these regions, so Codex can operate desktop apps by seeing, clicking, and
+    typing.
+  + The [Codex Chrome extension](/codex/app/chrome-extension) is available for
+    browser tasks that need signed-in Chrome context, working across tabs in the
+    background without taking over your browser.
+  + [Memories](/codex/memories) can remember useful preferences, recurring
+    workflows, tech stacks, and repository conventions when enabled. Memories are
+    off by default in the European Economic Area, the United Kingdom, and
+    Switzerland.
+  + [Chronicle](/codex/memories/chronicle) is available as an opt-in research
+    preview for ChatGPT Pro subscribers on macOS, helping Codex build memories
+    from recent screen context.
+* 2026-06-15
+
+  ### ChatGPT for iOS 1.2026.160
+
+  ### New features
+
+  + Added a workspace file browser for previewing files and linking workspace paths
+    into prompts.
+  + Added a directory picker for choosing a workspace folder when starting a new
+    thread.
+  + Added controls to expand or collapse all diffs while reviewing changed files.
+  + Added MCP approval choices for allowing requested actions in the current chat
+    or across chats.
+  + Added LaTeX rendering in Codex messages and plans.
+
+  ### Improvements and bug fixes
+
+  + Improved status indicators for running threads, queued prompts, side chats,
+    and subagents.
+  + Improved pairing and onboarding with clearer errors, manual pairing-code
+    support, and more reliable host selection after pairing.
+  + Improved task-list recovery, reconnect state, host-specific refresh, and
+    thread performance.
+  + Improved Codex profile sharing, activity history, and settings layout.
+  + Improved goal workflows with a composer shortcut, desktop-aligned goal message
+    actions, and better resumed question handling.
+  + Improved assistant message actions, transcript layout, and public rate-limit
+    names.
+  + Fixed stuck thread-list swipe actions, duplicate messages when reopening a new
+    thread, spawned subagents appearing as top-level task rows, and misleading
+    connection errors when sending prompts.
+* 2026-06-11
+
+  ### Codex app 26.609
+
+  ### New features
+
+  + Added rate-limit reset banking for Plus and Pro users, including one free
+    reset at launch and
+    [referral invitations](/codex/pricing#invite-friends-and-coworkers) for
+    earning more during the current promotion. Eligible Business members can
+    invite coworkers to earn shared workspace credits through a separate
+    referral program.
+  + Added [Developer mode](/codex/app/browser#developer-mode) for Browser use in
+    Chrome and the Codex in-app browser. It gives Codex controlled Chrome
+    DevTools Protocol (CDP) access for performance profiling and deeper debugging
+    of network traffic, console output, runtime errors, and page state.
+  + Added the `/init` command to the app composer for creating project
+    instructions with the same initialization workflow as the Codex CLI.
+  + Added customizable macOS Dock icons with light and dark Codex variants.
+  + Added Computer Use for Enterprise users outside the European Economic Area,
+    the United Kingdom, and Switzerland.
+  + Added support for configuring per-app access controls for Computer Use on
+    Windows.
+  + Added an **Unread chats** section to the command menu, with the most recently
+    updated unread chat selected by default.
+
+  ### Performance improvements and bug fixes
+
+  + Made Browser use up to 2x faster through CDP and DOM snapshot optimizations
+    that reduce browser round trips.
+  + Made command, browser, integration, and source activity summaries easier to
+    understand, and improved how completed chats present files, automations, and
+    other durable output.
+  + Improved plugin management by including workspace plugins, refreshing plugin
+    state more reliably after installation or removal, and letting you upload a
+    new version of an already-shared plugin without changing its access.
+  + Improved usage-limit errors with inline plan and workspace guidance,
+    including reset timing when available.
+  + Added `Cmd`+`Enter` and `Ctrl`+`Enter` as
+    shortcuts for submitting custom approval feedback.
+  + Fixed Browser use download handling and improved Developer mode recovery and
+    diagnostics.
+  + Fixed scheduled automations so they honor the selected approval mode, and
+    fixed manual project ordering, Browser tab dragging, MCP app sizing after
+    right-pane transitions, and clickable ChatGPT thread mentions.
+  + Fixed issues affecting background agent tab restoration, commit and pull
+    request message generation, sidebar pull request status updates, Codex Mobile
+    QR pairing, remote-control MFA, remote SSH installation and connection,
+    updater prompts, and overlay positioning at non-default zoom levels.
+  + Additional performance improvements and bug fixes.
+* 2026-06-09
+
+  ### Codex app 26.608
+
+  ### New features
+
+  + Added [Migrate to Codex](/codex/migrate) flows for importing supported setup
+    from Claude Code and Claude Cowork, including during onboarding.
+  + Revamped plugins screen with separate tabs, marketplace and
+    category filters, keyboard navigation, and clearer install actions.
+  + Expanded Settings search to find options from more panels, including Git and
+    pets.
+
+  ### Performance improvements and bug fixes
+
+  + Fixed goal timer overlap in narrow layouts.
+  + Reduced unread notifications while an active goal continues running.
+  + Kept review diff ordering consistent with the file tree.
+  + Improved window rendering on systems that don’t support translucent
+    backdrops, including Windows 10.
+  + Additional performance improvements and bug fixes.
+* 2026-06-09
+
+  ### ChatGPT for iOS 1.2026.153
+
+  ### New features
+
+  + Added support for choosing a branch, creating a worktree, and running an
+    environment setup script for new threads.
+  + Added a Codex profile screen with usage stats and token activity charts.
+  + Added `/goal` support for creating and managing goals from Codex Mobile.
+  + Added inline review comments when viewing changed files.
+  + Added support for asking in side chat from selected transcript text.
+  + Added support for editing the latest sent prompt.
+
+  ### Improvements and bug fixes
+
+  + Improved attachment support on Windows hosts.
+  + Skills and plugins now appear directly inline in the composer.
+  + Improved side chat and queued prompt visibility while a thread is running.
+  + Improved message styling, navigation, tool activity, Face ID behavior,
+    archived-thread browsing, and thread UI polish.
+* 2026-06-04
+
+  ### Codex app updates 26.602
+
+  ### New features
+
+  + Added activity insights and share cards to the
+    [Profile section](/codex/app/settings#profile). You can review Codex usage
+    highlights and save a profile card; sharing is available on consumer ChatGPT
+    plans.
+
+  ### Performance improvements and bug fixes
+
+  + Improved Computer Use startup readiness and appshot error reporting.
+  + Fixed browser and review UI issues, including fullscreen browser composer
+    controls, hex color swatches, terminal scrollbar alignment, and animated diff
+    stat alignment.
+  + Expanded onboarding with more role choices so Codex can tailor first-run
+    suggestions more accurately.
+  + Fixed configuration writes after plugin installation.
+  + Additional performance improvements and bug fixes.
+* 2026-06-02
+
+  ### Build and deploy websites with Sites
+
+  [**Sites**](/codex/sites) is now available in preview in the Codex app. Use the
+  Sites plugin to create, save, deploy, and inspect websites, dashboards, internal
+  tools, web apps, and games hosted by OpenAI.
+
+  Open **Sites** in the app sidebar to return to your projects and manage hosted
+  environment variables and secrets.
+
+  ChatGPT Business workspaces include Sites by default. ChatGPT Enterprise admins
+  can enable Sites for the appropriate roles through role-based access control
+  (RBAC).
+* 2026-06-02
+
+  ### ChatGPT for iOS 1.2026.146
+
+  ### New features
+
+  + Added an optional Face ID or passcode lock for Codex.
+  + Added a new settings screen for choosing Queue or Steer as the default
+    follow-up behavior and toggling line wrapping for code diffs.
+  + Added support for connecting to Windows machines over SSH.
+
+  ### Improvements and bug fixes
+
+  + Added support for `/side <prompt>` to start a side
+    conversation with an initial question.
+  + Improved follow-up prompts, the Codex home screen, and viewing changed files.
+  + Fixed issues with reconnecting, archiving threads, loading tasks, and
+    connecting to hosts.
+* 2026-06-01
+
+  ### Use Codex with Amazon Bedrock
+
+  Codex can now use supported OpenAI models available through Amazon Bedrock.
+  Configure [Amazon Bedrock as your model provider](/codex/amazon-bedrock) to run
+  Codex locally with AWS-managed authentication, account controls, and billing.
+* 2026-06-01
+
+  ### Terminal placement controls 26.601
+
+  ### New features
+
+  + Added **Default terminal location** in [General settings](/codex/app/settings#general).
+    When the bottom panel is enabled, choose whether the terminal shortcut and
+    environment actions open terminal tabs in the bottom panel or the right panel.
+
+  ### Performance improvements and bug fixes
+
+  + Additional performance improvements and bug fixes.
+
 
 
 ## Appshots, goal mode, and more 26.519 (2026-05-21)
