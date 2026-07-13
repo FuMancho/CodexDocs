@@ -42,7 +42,6 @@
 ## Using Codex — CLI
 - [CLI Overview](https://developers.openai.com/codex/cli)
 - [CLI Features](https://developers.openai.com/codex/cli/features)
-- [CLI Reference](https://developers.openai.com/codex/cli/reference)
 - [CLI Slash Commands](https://developers.openai.com/codex/cli/slash-commands)
 
 ## Using Codex — Cloud / Web
@@ -87,7 +86,6 @@
 - [Blog: Building frontend UIs with Codex and Figma](https://developers.openai.com/blog/building-frontend-uis-with-codex-and-figma)
 - [Blog: Run long horizon tasks with Codex](https://developers.openai.com/blog/run-long-horizon-tasks-with-codex)
 - [Blog Topic: Codex](https://developers.openai.com/blog/topic/codex)
-- [Cookbook: Codex Long Horizon Tasks](https://developers.openai.com/cookbook/examples/codex/long_horizon_tasks)
 - [Cookbook: Codex Prompting Guide](https://developers.openai.com/cookbook/examples/gpt-5/codex_prompting_guide)
 - [Cookbook Topic: Codex](https://developers.openai.com/cookbook/topic/codex)
 - [Resources: Codex](https://developers.openai.com/resources/codex)
@@ -102,5 +100,4 @@
 ## Reference Sources (for Jules)
 - [GitHub — openai/codex](https://github.com/openai/codex)
 - [GitHub Releases Atom Feed](https://github.com/openai/codex/releases.atom)
-- [npm — @openai/codex](https://www.npmjs.com/package/@openai/codex)
 - [Codex CLI Changelog (detailed)](https://developers.openai.com/codex/changelog)

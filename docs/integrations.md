@@ -35,7 +35,7 @@ Install the Codex extension in your editor:
 - [Cursor](cursor:extension/openai.chatgpt)
 - [Windsurf](windsurf:extension/openai.chatgpt)
 
-See: [IDE Overview](https://developers.openai.com/codex/ide) · [IDE Features](https://developers.openai.com/codex/ide/features) · [IDE Commands](https://developers.openai.com/codex/ide/commands)
+See: [IDE Overview](https://developers.openai.com/codex/ide) · [IDE Features](https://developers.openai.com/codex/ide/features)
 
 ### Cloud / Web
 

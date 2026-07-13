@@ -1,7 +1,406 @@
 # OpenAI Codex CLI Changelog
 
 > Curated changelog sourced from the [official Codex changelog](https://developers.openai.com/codex/changelog).
-> Last updated: 2026-05-21
+> Last updated: 2026-07-13
+
+## Codex CLI 0.144.3 (2026-07-13)
+
+### Chores
+- Published a version-only release with no merged pull request changes since rust-v0.144.2.
+
+## Codex CLI 0.144.2 (2026-07-13)
+
+### Bug Fixes
+- Restored the previous Guardian auto-review policy, request format, and tool behavior after rolling back a prompting regression. (#32672)
+
+## Codex joins the ChatGPT desktop app (2026-07-09)
+
+Codex is now part of the ChatGPT desktop app on macOS and Windows.
+Existing Codex app users can update as usual and keep their
+projects, settings, and workflows. You can make Codex the default
+view and, on macOS, keep the Codex app icon.
+
+### New Features
+- Edit Markdown and code directly in the app, use inline annotations, and ask Codex to revise selected content.
+- Review GitHub pull requests in the sidebar, with reviewer feedback alongside the diff, without leaving the app.
+- Work across repositories in one project.
+
+### Performance improvements and bug fixes
+- Made Computer Use faster with GPT-5.6.
+- Made task activity and progress easier to follow while Codex works.
+- Simplified plugin management by moving it into Settings.
+- Improved mobile connection reliability and fixed video rendering for SSH projects.
+- Additional performance improvements and bug fixes.
+
+## Codex CLI 0.144.1 (2026-07-09)
+
+### Bug Fixes
+- Fixed standalone installs failing when GitHub returns compact or reordered release metadata. (#31913)
+- Ensured macOS package installs expose the code-mode host alongside the codex executable. (#31913)
+- Kept code mode working when the companion host binary is unavailable by falling back to the embedded runtime. (#31913)
+
+## Codex CLI 0.144.0 (2026-07-09)
+
+### New Features
+- Usage-limit reset credits now show their type and expiration, and let you choose which credit to redeem. (#30488)
+- Added a writes app-approval mode that allows declared read-only actions while prompting for writes. (#30482)
+- MCP tools can now request authentication interactively without an experimental opt-in. (#28772)
+- App-server hosts can provide Codex authentication at runtime and redirect successful logins to a hosted page. (#28745,
+- Global pnunen installs are now detected so diagnostics and updates use the correct package manager. (#31503)
+- Selecting Ultra reasoning now warns when high multi-agent concurrency could increase usage quickly. (#31621)
+
+### Bug Fixes
+- Resumed ChatGPT threads recover when compaction references a retired model by retrying with the currently selected model. (#30319)
+- Fixed Code Mode crashes in Intel macOS release binaries. (#30953)
+- Windows sandbox sessions can delete files in writable roots and access the managed primary runtime. (#31138,
+- Pasted terminal control sequences can no longer corrupt TUI rendering or resumed conversation history. (#31494)
+- Long-running app sessions now refresh expired authentication for the hosted codex_apps connector. (#31486)
+- Responses WebSockets continue using the low-latency transport while respecting system proxies and custom certificate authorities. (#31441, #31622)
+
+### Documentation
+- Device-code login warnings now explain how to recognize and stop phishing attempts. (#31648)
+
+### Chores
+- Reduced plugin skill-loading time on remote executors by resolving namespaces once per root. (#31348)
+- Made the /review branch picker faster and more reliable in large repositories. (#31464)
+- Improved automatic review behavior with clearer instructions and a focused tool set. (#31480)
+- Made Amazon Bedrock model names clearly identify their GPT-5.6 family and variant. (#31636)
+
+## Codex CLI 0.143.0 (2026-07-08)
+
+### New Features
+- Remote plugins are now enabled by default, with richer catalog rows, npm marketplace sources, and visible remote/local versions. (#30297, #26705, #29375, #30981)
+- Codex can route authentication and Responses API traffic through macOS and Windows system proxies, including PAC and WPAD configurations. (#26708, #26709, #31335)
+- Added codex remote-control pair for generating manual pairing codes from a running daemon. (#29913)
+- Added Amazon Bedrock GPT-5.6 Sol, Terra, and Luna models, with first-class support for max reasoning effort. (#30285,
+- MCP tools now use tool search by default, and ChatGPT-hosted MCP servers can explicitly use session authentication. (#29486, #29733)
+- App-server clients can inspect environments, list descendant threads, and fork history through a specific turn. (#30291, #29591, #30277)
+
+### Bug Fixes
+- Fixed Windows ConPTY input handling for line endings and backspace, plus sandbox credential retry edge cases. (#29734, #29624, #29637)
+- Fixed stale TUI safety prompts and cancelled reviews that could leave MCP startup appearing busy. (#30490,
+- Improved recovery when exec servers are temporarily offline and prevented remote-control token refresh retry storms. (#30098, #30201)
+- Preserved trailing realtime transcript text and terminal rollout events during shutdown. (#29918, #30144)
+- Improved incremental WebSocket request success by ignoring response metadata during comparisons. (#30770)
+- Reduced installer failures from GitHub API rate limits by reusing release metadata. (#31056)
+
+### Documentation
+- Documented UUID7 thread and turn IDs, plus recommended remote-executor integration-test workflows. (#27714,
+
+### Chores
+- Updated OpenSSL, Hono, fast-uri, quick-xml, and crossbeam-epoch to address security advisories. (#29487,
+
+## ChatGPT for iOS 1.2026.181 (2026-07-06)
+
+### New Features
+- Added support for creating, searching, opening, forking, and managing Codex tasks directly from a conversation.
+- Added filters for staged, unstaged, branch, and last-turn changes, with controls for comparing branches.
+- Added support for adding selected transcript text directly to the composer.
+- Added previews for image and file attachments before sending.
+- Added inline Photos and Camera pickers to the attachment menu.
+- Added a connection shortcut and support for SSH hosts using private keys or no credentials.
+- Added usage limits and credit details to the task menu.
+
+### Performance improvements and bug fixes
+- Improved the task list with consistent task terminology, clearer delegated task titles, and a Needs input status.
+- Improved initial task loading and foreground recovery.
+- Improved autocomplete by selecting the first result automatically and accepting it with Return.
+- Improved model, reasoning, and Fast settings so changes remain scoped to the current task.
+- Improved task-management and dynamic tool activity presentation.
+- Improved side chats to open directly when only one conversation is available.
+- Improved plugin autocomplete with installed plugins and their icons.
+- Improved workspace diff accuracy and expand-and-collapse navigation.
+- Improved recovery by preserving thread state across reconnects and host pairings across sign-out.
+- Fixed stuck thread-list loading, prompt mode deadlocks, stale images, and microphone permission alerts.
+- Fixed shake to undo and keyboard refocusing after sending a prompt.
+
+## Codex CLI 0.142.5 (2026-07-01)
+
+### Bug Fixes
+- Prevented full Responses WebSocket request payloads from being written to trace logs. (#30771) June 2026
+
+## Codex CLI 0.142.4 (2026-06-29)
+
+### Chores
+- No user-facing changes were identified for this release.
+
+## Codex CLI 0.142.3 (2026-06-26)
+
+### Chores
+- Maintenance-only patch release with no user-facing changes since 0.142.2.
+
+## Codex Remote reaches general availability (2026-06-25)
+
+Codex Remote has reached general availability. Use Codex from the
+ChatGPT mobile app to start or continue work on a connected Mac or
+Windows host, review progress, and approve actions from your phone.
+Remote Control now uses authenticated one-to-one QR pairing between
+each iOS or Android device and each host. Update the ChatGPT mobile
+app and Codex App to the latest versions before connecting.
+Connections used since June 8, 2026, remain paired; older inactive
+connections need to pair again.
+The new DigitalOcean plugin lets Codex provision a
+DigitalOcean Droplet, configure SSH access, and connect it to the
+Codex App as a remote workspace.
+See Remote connections for setup and troubleshooting.
+
+## Codex CLI 0.142.2 (2026-06-25)
+
+### New Features
+- MCP tools now use tool search by default when supported, improving tool discovery while preserving compatibility with older models and providers.
+- macOS authentication clients can honor system proxy, PAC, and WPAD settings when respect_system_proxy is enabled.
+- Plugins can provide dedicated dark-mode logos through local manifests and remote catalogs.
+- Apps can display richer safety-buffering UI using server-provided visibility and faster-model metadata.
+
+### Bug Fixes
+- Remote plugin catalogs now return curated featured-plugin rankings.
+- Expired Amazon Bedrock credentials now produce actionable recovery guidance instead of a generic authorization error.
+- Remote stdio MCP servers now accept absolute working directories written in the remote platform’s path format.
+- Remote HTTP(S) image inputs now return clear model-visible validation errors; inline data URLs and local images remain supported.
+- PowerShell commands containing executable AST regions the safety classifier cannot inspect now require approval.
+- Code Mode now warns when the selected model lacks the required metadata.
+
+### Chores
+- Updated bundled OpenSSL and esbuild dependencies to patched releases.
+- Successful formatter runs are now quiet while failures still show diagnostics.
+
+## Codex CLI 0.142.1 (2026-06-25)
+
+### New Features
+- Added opt-in Windows system proxy support for authentication, including PAC, WPAD, static proxies, and bypass rules.
+
+## ChatGPT for iOS 1.2026.167 (2026-06-22)
+
+### New Features
+- Added per-host personality settings with Friendly and Pragmatic options.
+- Added support for editing goals directly in the composer.
+- Added a link from forked conversations back to the original thread.
+
+### Performance improvements and bug fixes
+- Improved side chat visibility with separate conversations above the composer.
+- Improved composer autocomplete for commands, skills, and plugins from any prefix.
+- Improved progress visibility for subagents, tasks, and worktree creation.
+- Fixed long threads loading.
+- Improved workspace file search, code review drafts, steering, and host setup and recovery.
+- Fixed Face ID unlocking, stopping responses, collapsed sections, and dark-mode host indicators.
+
+## Codex CLI 0.142.0 (2026-06-22)
+
+### New Features
+- /usage can now show and redeem earned usage-limit reset credits, with confirmation, retry, and refreshed availability states.
+- /plugins now organizes remote plugins into OpenAI Curated, Workspace, and Shared with me sections, while eligible turns can recommend and install relevant plugins.
+- Configurable rollout token budgets track usage across agent threads, provide remaining-budget reminders, and abort turns when exhausted.
+- App-server clients can configure multi-agent delegation as disabled, explicit-request-only, or proactive at the thread and turn level.
+- Added an indexed web-search mode that permits live searches while restricting direct page access to server-approved URLs.
+- Codex can now receive scheduled UTC time reminders and query the current time directly, including through client-provided app-server clocks.
+
+### Bug Fixes
+- Restored reliable Linux TUI rendering after suspending with Ctrl+Z and resuming with fg.
+- Exec-server processes and stdio MCP sessions now survive transient disconnects, including signed-URL refresh and retry-safe stdin writes.
+- Remote environments now preserve executor-native paths, shells, AGENTS.md discovery, and sandbox behavior across operating systems.
+- Plugin loading and installation now handle root marketplace layouts, manifest fallbacks, multiple skill paths, actionable download errors, and immediate tool refreshes.
+- Parent agents now receive terminal subagent errors instead of seeing failed work as an empty successful completion.
+- Goal-first threads are once again persisted and returned by thread/list and thread/search.
+
+### Chores
+- Reduced startup and session latency by deferring unnecessary DNS work, warming the model cache, reusing parsed plugin skills, parallelizing skill metadata reads, and skipping redundant catalog synchronization.
+- Reduced persistent-log churn by removing per-event WebSocket payload logging and filtering duplicated telemetry records.
+
+## Codex app 26.616 (2026-06-18)
+
+### New Features
+- Added Record & Replay, a macOS feature that turns a demonstrated workflow into a reusable skill. Initial availability excludes the European Economic Area, the United Kingdom, and Switzerland. You or your administrator must also enable Computer Use.
+- Added bulk actions to automation run history so you can mark every run as read or archive eligible runs.
+- Added thread handoff between local and remote hosts, so you can move a thread to a matching project on a connected host and continue it there. Codex can also coordinate the handoff for you.
+
+### Performance improvements and bug fixes
+- Added new deep links to manage SSH connections.
+- Improved Browser Use so visible-tab routing and annotations persist when a draft browser session moves to the server.
+- Additional performance improvements and bug fixes.
+
+## Codex CLI 0.141.0 (2026-06-18)
+
+### New Features
+- Remote executors now use authenticated, end-to-end encrypted Noise relay channels.
+- Cross-platform remote execution now preserves executor-native working directories and shells, including filesystem permission paths across app-server and exec-server boundaries.
+- Selected executor plugins can activate their stdio MCP servers per thread; plugin discovery also adds a created-by-me marketplace and auth-specific curated catalogs.
+- App-server clients can list immediate child threads, correlate external-agent imports with detailed results, and read or redeem rate-limit reset credits.
+- Realtime clients can explicitly append speech, control how Codex responses enter conversations, and omit startup context.
+- TUI input prompts can auto-resolve after inactivity, with a countdown that pauses on interaction.
+
+### Bug Fixes
+- Hook trust bypass now persists through codex exec thread start and resume, while blocking PostToolUse hooks correctly reject code-mode tool calls.
+- Plugin capabilities now route consistently by authentication mode, deduplicate conflicting App/MCP declarations, and preserve remote marketplace ordering.
+- Windows sandbox execution repairs stale credentials automatically and gives PowerShell commands more time before backgrounding.
+- Idle exec-server relays remain connected, and steered user input immediately interrupts wait_agent.
+- Bundled SQLite is pinned to a version containing the WAL-reset corruption fix.
+- TLS connections now support P-521 certificate signatures commonly used by enterprise proxies.
+
+### Chores
+- Reduced latency and memory use in large, tool-heavy sessions by caching tool search and eliminating repeated request and history copies.
+- Bounded prompt-image caching to 64 MiB and feedback uploads to eight related threads.
+- Terminal resize reflow is now always enabled, ignoring obsolete disabled settings.
+
+## Codex app features are available in the EEA, UK, and Switzerland (2026-06-16)
+
+More Codex app capabilities are rolling out to users in the
+European Economic Area, the United Kingdom, and Switzerland:
+- Computer Use is available on macOS and Windows in these regions, so Codex can operate desktop apps by seeing, clicking, and typing.
+- The Codex Chrome extension is available for browser tasks that need signed-in Chrome context, working across tabs in the background without taking over your browser.
+- Memories can remember useful preferences, recurring workflows, tech stacks, and repository conventions when enabled. Memories are off by default in the European Economic Area, the United Kingdom, and Switzerland.
+- Chronicle is available as an opt-in research preview for ChatGPT Pro subscribers on macOS, helping Codex build memories from recent screen context.
+
+## ChatGPT for iOS 1.2026.160 (2026-06-15)
+
+### New Features
+- Added a workspace file browser for previewing files and linking workspace paths into prompts.
+- Added a directory picker for choosing a workspace folder when starting a new thread.
+- Added controls to expand or collapse all diffs while reviewing changed files.
+- Added MCP approval choices for allowing requested actions in the current chat or across chats.
+- Added LaTeX rendering in Codex messages and plans.
+
+### Performance improvements and bug fixes
+- Improved status indicators for running threads, queued prompts, side chats, and subagents.
+- Improved pairing and onboarding with clearer errors, manual pairing-code support, and more reliable host selection after pairing.
+- Improved task-list recovery, reconnect state, host-specific refresh, and thread performance.
+- Improved Codex profile sharing, activity history, and settings layout.
+- Improved goal workflows with a composer shortcut, desktop-aligned goal message actions, and better resumed question handling.
+- Improved assistant message actions, transcript layout, and public rate-limit names.
+- Fixed stuck thread-list swipe actions, duplicate messages when reopening a new thread, spawned subagents appearing as top-level task rows, and misleading connection errors when sending prompts.
+
+## Codex CLI 0.140.0 (2026-06-15)
+
+### New Features
+- Added /usage views for daily, weekly, and cumulative account token activity.
+- /goal now preserves oversized text, large pasted blocks, and image attachments, including in remote app-server sessions.
+- Added permanent session deletion through codex delete, /delete, and app-server thread/delete, with confirmation safeguards and subagent cleanup.
+- Added /import for selectively importing setup, project configuration, and recent chats from Claude Code.
+- Typing @ now opens the unified mentions menu for files, plugins, and skills by default.
+- Added managed Amazon Bedrock API-key authentication and encrypted local storage for CLI and MCP OAuth credentials.
+
+### Bug Fixes
+- Corrupted SQLite state databases are now backed up and rebuilt automatically from rollout data, including malformed database-directory cases.
+- Prevented /review from crashing when Esc is pressed with queued guidance, while preserving that guidance when the review is canceled.
+- Improved MCP reliability by retrying transient startup failures, reporting unusable OAuth credentials as logged out, and preserving explicitly disabled servers.
+- Fixed remote plugin uninstall requests and correctly surfaced apps requiring authentication during installation.
+- Persisted “Don’t remind me” update dismissals reliably and cleared stale running-hook indicators after completed turns.
+- Non-TTY background commands can now be interrupted with Ctrl-C while preserving their final output and exit status.
+
+### Documentation
+- Clarified contributor guidance around keeping crate APIs narrow and supporting Linux, macOS, and Windows.
+
+### Chores
+- Improved responsiveness for large repositories and long sessions by preserving Git’s built-in filesystem monitor, avoiding duplicate history reads, accelerating archive lookup, and caching turn-diff rendering.
+- Removed the experimental /realtime voice controls and related audio dependencies from the TUI.
+
+## Codex app 26.609 (2026-06-11)
+
+### New Features
+- Added rate-limit reset banking for Plus and Pro users, including one free reset at launch and referral invitations for earning more during the current promotion. Eligible Business members can invite coworkers to earn shared workspace credits through a separate referral program.
+- Added Developer mode for Browser use in Chrome and the Codex in-app browser. It gives Codex controlled Chrome DevTools Protocol (CDP) access for performance profiling and deeper debugging of network traffic, console output, runtime errors, and page state.
+- Added the /init command to the app composer for creating project instructions with the same initialization workflow as the Codex CLI.
+- Added customizable macOS Dock icons with light and dark Codex variants.
+- Added Computer Use for Enterprise users outside the European Economic Area, the United Kingdom, and Switzerland.
+- Added support for configuring per-app access controls for Computer Use on Windows.
+- Added an Unread chats section to the command menu, with the most recently updated unread chat selected by default.
+
+### Performance improvements and bug fixes
+- Made Browser use up to 2x faster through CDP and DOM snapshot optimizations that reduce browser round trips.
+- Made command, browser, integration, and source activity summaries easier to understand, and improved how completed chats present files, automations, and other durable output.
+- Improved plugin management by including workspace plugins, refreshing plugin state more reliably after installation or removal, and letting you upload a new version of an already-shared plugin without changing its access.
+- Improved usage-limit errors with inline plan and workspace guidance, including reset timing when available.
+- Added Cmd+Enter and Ctrl+Enter as shortcuts for submitting custom approval feedback.
+- Fixed Browser use download handling and improved Developer mode recovery and diagnostics.
+- Fixed scheduled automations so they honor the selected approval mode, and fixed manual project ordering, Browser tab dragging, MCP app sizing after right-pane transitions, and clickable ChatGPT thread mentions.
+- Fixed issues affecting background agent tab restoration, commit and pull request message generation, sidebar pull request status updates, Codex Mobile QR pairing, remote-control MFA, remote SSH installation and connection, updater prompts, and overlay positioning at non-default zoom levels.
+- Additional performance improvements and bug fixes.
+
+## Codex app 26.608 (2026-06-09)
+
+### New Features
+- Added Import to Codex flows for importing supported setup from Claude Code and Claude Cowork, including during onboarding.
+- Revamped plugins screen with separate tabs, marketplace and category filters, keyboard navigation, and clearer install actions.
+- Expanded Settings search to find options from more panels, including Git and pets.
+
+### Performance improvements and bug fixes
+- Fixed goal timer overlap in narrow layouts.
+- Reduced unread notifications while an active goal continues running.
+- Kept review diff ordering consistent with the file tree.
+- Improved window rendering on systems that don’t support translucent backdrops, including Windows 10.
+- Additional performance improvements and bug fixes.
+
+## ChatGPT for iOS 1.2026.153 (2026-06-09)
+
+### New Features
+- Added support for choosing a branch, creating a worktree, and running an environment setup script for new threads.
+- Added a Codex profile screen with usage stats and token activity charts.
+- Added /goal support for creating and managing goals from Codex Mobile.
+- Added inline review comments when viewing changed files.
+- Added support for asking in side chat from selected transcript text.
+- Added support for editing the latest sent prompt.
+
+### Performance improvements and bug fixes
+- Improved attachment support on Windows hosts.
+- Skills and plugins now appear directly inline in the composer.
+- Improved side chat and queued prompt visibility while a thread is running.
+- Improved message styling, navigation, tool activity, Face ID behavior, archived-thread browsing, and thread UI polish.
+
+## Codex CLI 0.139.0 (2026-06-09)
+
+### New Features
+- Code mode can now call standalone web search directly, including from nested JavaScript tool calls, and receive plaintext search results.
+- Tool and connector input schemas now preserve oneOf and allOf, and large schemas keep more shallow structure when compacted, improving compatibility with richer MCP tools.
+- codex doctor now includes editor and pager environment details in the local report while redacting raw values in JSON output.
+- Plugin marketplace automation is more informative and responsive: codex plugin marketplace list --json now includes each marketplace source, and plugin lists can return from the cached remote catalog before refreshing in the background.
+
+### Bug Fixes
+- codex resume --last "..." and codex fork --last "..." now treat the trailing argument as the initial prompt instead of misreading it as a session ID.
+- MCP startup warnings from subagents now stay in the thread that owns them, avoiding duplicate parent-thread alerts and stuck startup spinners in the TUI.
+- Image edits now use the exact referenced image file paths instead of guessing from conversation history, so attached-image edits land on the intended input.
+- Bare URLs with ~ in the path are now linkified end to end in the TUI instead of being truncated before the tilde.
+- Thread resets such as /new, /clear, and /fork no longer drop cloud-managed requirements or feature flags during TUI config reloads.
+- Sandbox execution now preserves approved escalation decisions and enforces configured proxy-only networking more consistently.
+
+### Chores
+- Release builds once again publish separate symbol archives with line tables, improving post-release crash symbolication without bringing back the earlier full-debug build slowdown.
+- The embedded V8 toolchain was updated to rusty_v8 149.2.0.
+
+## Codex CLI 0.138.0 (2026-06-08)
+
+### New Features
+- The /app command can now hand off the current CLI thread into Codex Desktop on macOS and native Windows, and Windows workspace launches can open directly into Desktop instead of stopping at a manual prompt.
+- Local image attachments and standalone image generations now expose their saved file paths to the model, which makes follow-up edits and file references more reliable.
+- Reasoning effort selection is more flexible: the TUI adds fallback shortcuts for terminals that miss Alt bindings, and model-defined effort levels now flow through in the order advertised by the model.
+- App-server integrations can now read account token usage, and Codex auth supports v2 personal access tokens in CLI and app-server flows.
+- Plugin automation got richer structured output: add/remove and marketplace commands support --json, plugin list JSON includes marketplace source, and plugin detail data now exposes default prompts, remote MCP servers, and unavailable app templates.
+
+### Bug Fixes
+- Goal workflows are more predictable: multiline paste in /goal edit no longer submits early, idle auto-turns stay out of Plan mode, and goals stop auto-continuing after terminal turn failures.
+- Forked threads now keep user-renamed titles instead of falling back to the original first-prompt name.
+- The TUI no longer adds extra blank space while streaming, and cancelled prompts reopen with the cursor at the end so you can keep editing naturally.
+- TUI config write failures now show the underlying cause, making validation problems and read-only filesystem issues much easier to diagnose.
+- Startup is more resilient across environments, with support for /usr/bin/bash, shorter Linux proxy socket paths, and pre-refresh of expired OAuth-backed MCP credentials.
+- Workspace instruction loading is more accurate for remote and symlinked workspaces, so the right AGENTS.md files are picked up consistently.
+
+### Documentation
+- The CLI README was refreshed to remove stale guidance and better match the current documentation flow.
+
+### Chores
+- TUI startup does less repeated plugin work by reusing discovery results and loading only hook metadata on the critical path.
+- resume --last now finds the newest matching session through the state DB first, which speeds up restore on large local histories.
+- Large MCP/Ollama streams and long message histories process much faster thanks to optimized byte scanning.
+
+## Codex app updates 26.602 (2026-06-04)
+
+### New Features
+- Added activity insights and share cards to the Profile section. You can review Codex usage highlights and save a profile card; sharing is available on consumer ChatGPT plans.
+
+### Performance improvements and bug fixes
+- Improved Computer Use startup readiness and appshot error reporting.
+- Fixed browser and review UI issues, including fullscreen browser composer controls, hex color swatches, terminal scrollbar alignment, and animated diff stat alignment.
+- Expanded onboarding with more role choices so Codex can tailor first-run suggestions more accurately.
+- Fixed configuration writes after plugin installation.
+- Additional performance improvements and bug fixes.
 
 
 ## Appshots, goal mode, and more 26.519 (2026-05-21)
