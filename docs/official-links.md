@@ -1,7 +1,7 @@
 # Official OpenAI Codex Documentation Links
 
 > All links sourced from [`developers.openai.com`](https://developers.openai.com/codex/cli/).
-> Last updated: 2026-05-14
+> Last updated: 2026-07-23
 
 ## Getting Started
 - [Overview / CLI Landing](https://developers.openai.com/codex/cli)
